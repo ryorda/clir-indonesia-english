@@ -24,9 +24,9 @@ def test(size, window) :
 	
 	# sim = Doc2Vec.cosine_similarities(vec1, [vec2])
 	
-	result_title = open('result/' + prefix + str(size) + "_" + str(window) + "_title" + ".txt", 'w', 1)
-	result_desc = open('result/' + prefix + str(size) + "_" + str(window) + "_desc" + ".txt", 'w', 1)
-	result_narr = open('result/' + prefix + str(size) + "_" + str(window) + "_narr" + ".txt", 'w', 1)
+	result_title = open('result/' + prefix + str(size) + "_" + str(window) + "_title" + ".txt", 'w', 1, encoding='utf-8')
+	result_desc = open('result/' + prefix + str(size) + "_" + str(window) + "_desc" + ".txt", 'w', 1, encoding='utf-8')
+	result_narr = open('result/' + prefix + str(size) + "_" + str(window) + "_narr" + ".txt", 'w', 1, encoding='utf-8')
 
 	queries = Queries.Queries()
 	idx = -1

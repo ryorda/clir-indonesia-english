@@ -7,8 +7,8 @@ root 			= tree_gv.getroot()
 tokenizer = TweetTokenizer()
 
 file_writer = {
-	"en" : open('dataset/GV-en_tokenized%s.txt' % sys.argv[1], 'w'),
-	"id" : open('dataset/GV-id_tokenized%s.txt' % sys.argv[1], 'w')	
+	"en" : open('dataset/GV-en_tokenized%s.txt' % sys.argv[1], 'w', encoding='utf-8'),
+	"id" : open('dataset/GV-id_tokenized%s.txt' % sys.argv[1], 'w', encoding='utf-8')	
 }
 
 if (sys.argv[1]) == '1' :
