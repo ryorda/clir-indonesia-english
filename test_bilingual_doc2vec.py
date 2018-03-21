@@ -5,14 +5,14 @@ import os
 import Queries
 from multiprocessing import Pool
 import sys
-from nltk.tokenize import WhitespaceTokenizer
+from nltk.tokenize import TweetTokenizer
 
 def test(size, window) :
 
-	tokenizer = WhitespaceTokenizer()
+	tokenizer = TweetTokenizer()
 
-	regex_docno = re.compile('<DOCNO>.*?</DOCNO>', re.M)
-	regex_docno2 = re.compile('</?DOCNO>')
+	regex_docno = re.compile('<docno>.*?</docno>', re.M)
+	regex_docno2 = re.compile('</?docno>')
 
 	prefix = 'model_bilingual_mono_'
 
@@ -41,9 +41,9 @@ def test(size, window) :
 					doc = ''
 					docno = ''
 					for line in f :
-						if '<DOC>' in line :
+						if '<doc>' in line :
 							doc = ''
-						elif '</DOC>' in line :
+						elif '</doc>' in line :
 							sim_title = model.wmdistance(queries.title, doc)
 							sim_desc = model.wmdistance(queries.desc, doc)
 							sim_narr = model.wmdistance(queries.narr, doc)
@@ -57,7 +57,7 @@ def test(size, window) :
 							result_narr.write(str(idx) + ' ' + docno + ' ' + str(sim_narr) + '\n')
 
 						else :
-							doc += '\n' + line.strip()
+							doc += '\n' + ' '.join(tokenizer.tokenize(line.strip().lower()))
 
 
 
