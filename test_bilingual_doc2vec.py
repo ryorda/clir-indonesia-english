@@ -19,7 +19,7 @@ def test(size, window) :
 	news = ['GH95', 'LAT94']
 	regex_news = [None, re.compile('la[0-9]+')]
 
-	print('load ' + prefix + str(size) + "_" + str(window) + "...")
+	print('load ' + prefix + str(size) + "_" + str(window) + "_v%s" % sys.argv[1] + "...")
 	model = Doc2Vec.load('model/' + prefix + str(size) + "_" + str(window) + "_v%s" % sys.argv[1] + ".doc2vec")
 	
 	# sim = Doc2Vec.cosine_similarities(vec1, [vec2])
@@ -50,7 +50,7 @@ def test(size, window) :
 
 							docno = regex_docno.search(doc).group(0)
 							docno = regex_docno2.sub('', docno.strip()).strip()
-							print(prefix + str(size) + "_" + str(window) + '  ' + docno)
+							print(prefix + str(size) + "_" + str(window) + "_v%s" % sys.argv[1] + '  ' + docno)
 
 							result_title.write(str(idx) + ' ' + docno + ' ' + str(sim_title) + '\n')
 							result_desc.write(str(idx) + ' ' + docno + ' ' + str(sim_desc) + '\n')
