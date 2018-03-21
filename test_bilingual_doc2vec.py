@@ -11,8 +11,8 @@ def test(size, window) :
 
 	tokenizer = TweetTokenizer()
 
-	regex_docno = re.compile('<docno>.*?</docno>', re.M)
-	regex_docno2 = re.compile('</?docno>')
+	regex_docno = re.compile('<DOCNO>.*?</DOCNO>', re.M)
+	regex_docno2 = re.compile('</?DOCNO>')
 
 	prefix = 'model_bilingual_mono_'
 
@@ -41,9 +41,9 @@ def test(size, window) :
 					doc = ''
 					docno = ''
 					for line in f :
-						if '<doc>' in line :
+						if '<DOC>' in line :
 							doc = ''
-						elif '</doc>' in line :
+						elif '</DOC>' in line :
 							sim_title = model.wmdistance(queries.title, doc)
 							sim_desc = model.wmdistance(queries.desc, doc)
 							sim_narr = model.wmdistance(queries.narr, doc)
@@ -55,7 +55,8 @@ def test(size, window) :
 							result_title.write(str(idx) + ' ' + docno + ' ' + str(sim_title) + '\n')
 							result_desc.write(str(idx) + ' ' + docno + ' ' + str(sim_desc) + '\n')
 							result_narr.write(str(idx) + ' ' + docno + ' ' + str(sim_narr) + '\n')
-
+						elif '<DOCNO>' in line :
+							doc += '\n' + line.strip()	
 						else :
 							doc += '\n' + ' '.join(tokenizer.tokenize(line.strip().lower()))
 
