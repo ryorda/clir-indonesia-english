@@ -3,8 +3,8 @@ from nltk.tokenize import WhitespaceTokenizer
 
 tokenizer = WhitespaceTokenizer()
 
-en_doc = open('../dataset/GV-en_tokenized.txt', 'r')
-id_doc = open('../dataset/GV-id_tokenized.txt', 'r')
+en_doc = open('dataset/GV-en_tokenized%s.txt' % sys.argv[1], 'r')
+id_doc = open('dataset/GV-id_tokenized%s.txt' % sys.argv[1], 'r')
 
 en_sentences = []
 id_sentences = []

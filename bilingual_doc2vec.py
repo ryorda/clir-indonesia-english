@@ -1,11 +1,12 @@
 from gensim.models import Doc2Vec
 from gensim.models.doc2vec import LabeledSentence
 from nltk.tokenize import WhitespaceTokenizer
+import sys
 
 tokenizer = WhitespaceTokenizer()
 
-en_doc = open('../dataset/GV-en_tokenized.txt', 'r')
-id_doc = open('../dataset/GV-id_tokenized.txt', 'r')
+en_doc = open('dataset/GV-en_tokenized%s.txt' % sys.argv[1], 'r')
+id_doc = open('dataset/GV-id_tokenized%s.txt' % sys.argv[1], 'r')
 
 en_sentences = []
 id_sentences = []

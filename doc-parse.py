@@ -1,17 +1,17 @@
 import xml.etree.ElementTree as ET
 from nltk.tokenize import TweetTokenizer
+import sys
 
-tree_gv 	= ET.parse('../dataset/GlobalVoice-en-id.tmx')
+tree_gv 	= ET.parse('dataset/GlobalVoice-en-id.tmx')
 root 			= tree_gv.getroot()
 tokenizer = TweetTokenizer()
 
 file_writer = {
-	"en" : open('../dataset/GV-en_tokenized%d.txt' % sys.argv[0], 'w'),
-	"id" : open('../dataset/GV-id_tokenized%d.txt' % sys.argv[0], 'w')	
+	"en" : open('dataset/GV-en_tokenized%s.txt' % sys.argv[1], 'w'),
+	"id" : open('dataset/GV-id_tokenized%s.txt' % sys.argv[1], 'w')	
 }
 
-
-if (sys.argv[0]) == 1 :
+if (sys.argv[1]) == '1' :
 	# remove punctuation
 	for tuv in root.iter('tuv'):
 		text 	= tuv.find('seg').text.strip()
@@ -29,7 +29,7 @@ if (sys.argv[0]) == 1 :
 	for k, f in file_writer.items() : 
 		f.close();
 
-elif (sys.argv[0]) == 2 :
+elif (sys.argv[1]) == '2' :
 	# include punctuation
 	for tuv in root.iter('tuv'):
 		text 	= tuv.find('seg').text.strip()
