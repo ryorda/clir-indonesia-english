@@ -44,9 +44,9 @@ def test(size, window) :
 						if '<DOC>' in line :
 							doc = ''
 						elif '</DOC>' in line :
-							sim_title = model.wmdistance(queries.title, doc)
-							sim_desc = model.wmdistance(queries.desc, doc)
-							sim_narr = model.wmdistance(queries.narr, doc)
+							sim_title = model.wmdistance(' '.join(tokenizer.tokenize(queries.title.strip().lower())), doc)
+							sim_desc = model.wmdistance(' '.join(tokenizer.tokenize(queries.desc.strip().lower())), doc)
+							sim_narr = model.wmdistance(' '.join(tokenizer.tokenize(queries.narr.strip().lower())), doc)
 
 							docno = regex_docno.search(doc).group(0)
 							docno = regex_docno2.sub('', docno.strip()).strip()
