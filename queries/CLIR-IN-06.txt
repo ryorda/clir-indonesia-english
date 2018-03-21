@@ -1,0 +1,327 @@
+<num> C301 </num> 
+<IN-title> Merek Nestlé </IN-title>
+<IN-desc> Merek-merek apa yang dipasarkan oleh Nestlé di seluruh dunia? </IN-desc> 
+<IN-narr> Artikel-artikel yang relevan melaporkan nama produk-produk yang dipasarkan secara global oleh Nestlé atau perusahaan-perusahaan milik kelompok Nestlé. Pada kasus kedua, dokumen harus menyebutkan secara jelas perusahaan induknya. </IN-narr> 
+</top>
+
+<top> 
+<num> C302 </num> 
+<IN-title> Pemboikotan oleh Konsumen </IN-title> 
+<IN-desc> Temukan dokumen-dokumen yang menyebutkan atau mendiskusikan akibat dari pemboikotan oleh konsumen. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan melaporkan diskusi-diskusi atau pandangan-pandangan mengenai keefektifan pemboikotan oleh konsumen. Masalah-masalah moral pada pemboikotan juga relevan. Hanya pemboikotan oleh konsumen yang relevan, pemboikotan karena alasan politik harus diabaikan. </IN-narr> 
+</top>
+
+<top> 
+<num> C303 </num> 
+<IN-title> Lukisan-lukisan dari Itali </IN-title> 
+<IN-desc> Temukan informasi mengenai tempat-tempat dimana lukisan-lukisan atau gambar-gambar dari Itali dipamerkan atau diperlihatkan kepada publik. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan menyebutkan lokasi-lokasi dari pameran-pameran yang tetap ataupun yang sementara dimanapun di dunia. Informasi mengenai dimana lukisan-lukisan atau gambar-gambar yang dihasilkan oleh seniman-seniman Itali yang dipamerkan di musium, balai budaya, atau semacamnya, juga diminati. Informasi yang diberikan harus cukup untuk mengenali lokasi secara tepat, misalnya nama dari suatu kota atau negara tidaklah cukup. </IN-narr> 
+</top>
+ 
+<top> 
+<num> C304 </num> 
+<IN-title> Tempat-tempat Peninggalan Dunia </IN-title> 
+<IN-desc> Beri nama-nama dan/atau lokasi dari tempat-tempat yang telah ditunjuk sebagai Tempat-tempat Peninggalan Dunia UNESCO yang keindahannya sangat terkenal atau penting. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan harus menyebutkan nama dan/atau lokasi geografis dari monumen-monumen, kota-kota atau tempat-tempat yang telah ditunjuk secara resmi oleh UNESCO sebagai tempat-tempat Peninggalan Dunia yang keindahannya sangat terkenal atau penting. Diskusi-diskusi mengenai tempat-tempat yang diusulkan atau mempunyai potensi adalah tidak relevan. Dokumen harus secara jelas menyebutkan adanya status UNESCO yang resmi. </IN-narr> 
+</top>
+
+<top> 
+<num> C305 </num> 
+<IN-title> Harga-harga Minyak </IN-title> 
+<IN-desc> Berapa harga minyak saat ini? </IN-desc> 
+<IN-narr> Hanya dokumen-dokumen yang menyebutkan harga minyak saat ini yang relevan, misalnya harga minyak pada saat dokumen ditulis. Referensi pada harga-harga minyak di masa lalu atau ramalan mengenai perubahan harga di masa depan adalah tidak relevan. </IN-narr> 
+</top>
+
+<top> 
+<num> C306 </num> 
+<IN-title> Kegiatan-kegiatan ETA di Perancis </IN-title> 
+<IN-desc> Temukan dokumen-dokumen yang melaporkan kegiatan-kegiatan kelompok teroris ETA dari Basque di Perancis. </IN-desc> 
+<IN-narr> Hanya dokumen-dokumen yang melaporkan kegiatan-kegiatan dari kelompok teroris ETA dari Basque di daerah Perancis, baik persenjataan, politik, keuangan, atau lainnya, adalah yang relevan. Kegiatan-kegiatan ETA di Spanyol adalah tidak relevan. </IN-narr> 
+</top>
+
+<top> 
+<num> C307 </num> 
+<IN-title> Film-film yang berlokasi di Skotlandia </IN-title> 
+<IN-desc> Temukan informasi mengenai film-film yang kegiatannya berlokasi di Skotlandia. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan harus menyebutkan film-film yang kegiatannya berlokasi di Skotlandia. Film-film yang dibuat di Skotlandia, tetapi lokasi sebenarnya di tempat lain adalah tidak relevan. Sandiwara seperti «Macbeth» adalah tidak relevan, tetapi versi filmnya adalah relevan. Film-film dokumentasi yang menyertakan pemandangan di Skotlandia juga diminati. </IN-narr> 
+</top>
+
+<top> 
+<num> C308 </num> 
+<IN-title> Gerhana Matahari </IN-title> 
+<IN-desc> Temukan dokumen-dokumen yang melaporkan gerhana matahari total atau sebagian. </IN-desc> 
+<IN-narr> Dokumen-dokumen manapun yang memberikan informasi mengenai gerhana matahari adalah relevan. Dokumen-dokumen mengenai gerhana bulan atau pergerakan planet adalah tidak relevan. 
+</IN-narr> 
+</top>
+
+<top> 
+<num> C309 </num> 
+<IN-title> Obat-obat “Keras” </IN-title> 
+<IN-desc> Apa bahaya dari obat-obat “keras” yang tidak sah terhadap kesehatan, seperti heroin dan kokain, dibandingkan dengan obat-obat “ringan”? </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan harus memberikan informasi mengenai akibat-akibat medis karena penggunaan tidak sah dan ketergantungan pada obat-obat keras. Informasi mengenai masalah-masalah dari penggunaan obat-obat "ringan" adalah tidak relevan. </IN-narr> 
+</top>
+
+<top> 
+<num> C310 </num> 
+<IN-title> Pengolahan Limbah Industri </IN-title> 
+<IN-desc> Temukan dokumen-dokumen yang menyebutkan metode-metode yang digunakan untuk mengolah atau membuang limbah industri. </IN-desc> 
+<IN-narr> Dokumen-dokumen harus menyebutkan tidak hanya cara-cara yang berbeda mengenai pengolahan limbah industri (misalnya tempat pembakaran sampah, daur ulang produk-produk limbah), tetapi juga harus menyebutkan negara, kota atau daerah dimana metode itu diterapkan. </IN-narr> 
+</top>
+
+<top> 
+<num> C311 </num> 
+<IN-title> Pengangguran di Eropa </IN-title> 
+<IN-desc> Temukan informasi dan angka-angka mengenai tingkat pengangguran di negara-negara Eropa.</IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan harus membicarakan masalah pengangguran di satu atau lebih negara-negara Eropa. Dokumen-dokumen harus juga memberikan angka-angka yang menunjukkan tingkat pengangguran. </IN-narr> 
+</top>
+
+<top> 
+<num> C312 </num> 
+<IN-title> Serangan Anjing </IN-title> 
+<IN-desc> Apa akibat-akibat dari penyerangan anjing terhadap manusia? </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan menggambarkan akibat-akibat dari kejadian dimana seorang manusia diserang oleh seekor anjing, misalnya berbagai luka yang ditimbulkan dan/atau jenis-jenis sanksi yang dapat dikenakan terhadap pemilik anjing. </IN-narr> 
+</top>
+
+<top> 
+<num> C313 </num> 
+<IN-title> Perayaan Seabad </IN-title> 
+<IN-desc> Temukan dokumen-dokumen yang melaporkan peringatan ke-100 dari suatu kejadian? </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan berisi informasi mengenai peringatan ke-100 atas kelahiran atau kematian seorang yang terkenal atau peringatan ke-100 dari suatu kejadian bersejarah yang penting. </IN-narr> 
+</top>
+
+<top> 
+<num> C314 </num> 
+<IN-title> Jenis-jenis yang Terancam </IN-title> 
+<IN-desc> Apa tindakan-tindakan yang diambil di Eropa untuk melindungi binatang-binatang atau tanaman-tanaman yang menghadapi risiko punah? </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan mendiskusikan tindakan-tindakan yang diambil untuk melindungi jenis-jenis binatang atau tanaman yang menghadapi risiko punah. </IN-narr> 
+</top>
+
+<top> 
+<num> C315 </num> 
+<IN-title> Penggunaan Obat Terlarang di Olahraga </IN-title> 
+<IN-desc> Pada olahraga apa obat-obat terlarang digunakan secara tidak sah? </IN-desc> 
+<IN-narr> Temukan dokumen-dokumen yang melaporkan kasus-kaus spesifik dimana seorang olahragawan profesional telah dituduh menggunakan obat-obat terlarang untuk meningkatkan prestasinya. </IN-narr> 
+</top>
+
+<top> 
+<num> C316 </num> 
+<IN-title> Pemogokan </IN-title> 
+<IN-desc> Siapa yang melakukan pemogokan dan mengapa? </IN-desc> 
+<IN-narr> Temukan dokumen-dokumen yang melaporkan kasus-kasus spesifik mengenai pemogokan dimanapun di dunia. Dokumen-dokumen harus memberikan informasi spesifik mengenai penyebab pemogokan dan tujuan-tujuan yang diharapkan akan dicapai oleh orang-orang yang melakukan pemogokan melalui tindakan di bidang industrinya. Hanya dokumen-dokumen yang membicarakan pemogokan yang sesungguhnya adalah relevan; informasi mengenai kemungkinan pemogokan di masa depan adalah tidak ada hubungannya dengan masalah ini. </IN-narr> 
+</top>
+
+<top> 
+<num> C317 </num> 
+<IN-title> Obat-obat Anti-kanker </IN-title> 
+<IN-desc> Temukan informasi mengenai efek-efek klinik dan percobaan dari obat-obat dan perawatan medis lainnya terhadap kanker. </IN-desc> 
+<IN-narr> Temukan dokumen-dokumen yang berisi informasi mengenai hasil-hasil klinis atau percobaan yang berhubungan dengan pengembangan atau pengujian obat-obat anti kanker atau pengobatan-pengobatan, termasuk terapi hormon, kemoterapi dan terapi kekebalan tubuh. </IN-narr> 
+</top>
+
+<top> 
+<num> C318 </num> 
+<IN-title> Pendidikan Seks </IN-title> 
+<IN-desc> Apakah pendidikan seks diberikan di sekolah-sekolah di Eropa? </IN-desc> 
+<IN-narr> Temukan dokumen-dokumen yang memberikan informasi tentang pendidikan seks di sekolah-sekolah di Eropa. Dokumen-dokumen yang relevan melaporkan alasan-alasan tentang diperkenalkannya topik ini di kelas, atau adanya diskusi mengenai setuju atau tidak setuju adanya pendidikan seks sebagai bagian dari kurikulum sekolah. </IN-narr> 
+</top>
+
+<top> 
+<num> C319 </num> 
+<IN-title> Produksi Candu Global </IN-title> 
+<IN-desc> Temukan informasi mengenai pengolahan dan/atau produksi candu di seluruh dunia. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan memberikan informasi mengenai pengolahan bunga candu atau produksi candu dan turunan candu. Produksi candu secara tidak sah dan sah adalah relevan. </IN-narr> 
+</top>
+
+<top> 
+<num> C320 </num> 
+<IN-title> Krisis Energi </IN-title> 
+<IN-desc> Temukan informasi mengenai berbagai kekurangan energi atau bahan bakar. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan harus menyebutkan dimana krisis energi terjadidan menyatakan sebab-sebabnya. </IN-narr> 
+</top>
+
+<top> 
+<num> C321 </num> 
+<IN-title> Orang-orang Taliban di Afganistan </IN-title> 
+<IN-desc> Temukan informasi mengenai kepercayaan-kepercayaan dan kebiasaan-kebiasaan dari gerakan Islam Taliban di Afganistan. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan memberikan informasi mengenai gerakan Islam Taliban di Afganistan dan kepercayaan-kepercayaan dan kebiasaan-kebiasaan mereka. Secara khusus yang diminati adalah laporan-laporan mengenai perlakuan Taliban terhadap wanita. </IN-narr> 
+</top>
+
+<top> 
+<num> C322 </num> 
+<IN-title> Energi Atom </IN-title> 
+<IN-desc> Temukan dokumen-dokumen yang menyetujui atau menentang penggunaan energi atom untuk tujuan-tujuan yang bersifat damai. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan harus memberikan alasan-alasan umum yang menyetujui atau menentang penggunaan energi atom untuk tujuan-tujuan yang bersifat damai. Laporan-laporan mengenai kejadian-kejadian tertentu atau bencana-bencana yang melibatkan energi atom tidak diminati kecuali menyertakan suatu diskusi yang umum. </IN-narr> 
+</top>
+
+
+<top> 
+<num> C323 </num> 
+<IN-title> Pengetatan Persyaratan Visa </IN-title> 
+<IN-desc> Temukan dokumen-dokumen yang memberikan informasi mengenai pengetatan pembatasan visa dan hukum-hukum imigrasi. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan harus memberikan informasi mengenai negara-negara yang baru saja membuat peraturan-peraturan imigrasi dan visanya menjadi lebih terbatas. Juga yang diminati adalah diskusi-diskusi mengenai negara-negara yang sekarang mempertimbangkan akan menerapkan pembatasan ini. </IN-narr> 
+</top>
+
+<top> 
+<num> C324 </num> 
+<IN-title> Peragawati-peragawati Terkenal </IN-title> 
+<IN-desc> Temukan nama peragawati-peragawati terkenal di dunia internasional. </IN-desc> 
+<IN-narr> Peragawati-peragawati terkenal didefinisikan sebagai peragawati-peragawati pakaian yang telah berhasil sehingga mencapai status orang yang terkenal. Dokumen-dokumen yang relevan memberikan nama-nama peragawati terkenal. Dokumen harus secara jelas menyebutkan bahwa orang yang disebutkan dianggap sebagai orang yang terkenal di dunia internasional. </IN-narr> 
+</top>
+
+<top> 
+<num> C325 </num> 
+<IN-title> Uang Sekolah Mahasiswa </IN-title> 
+<IN-desc> Temukan dokumen-dokumen yang mendiskusikan diadakannya atau dinaikkannya uang sekolah mahasiswa di universitas. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan harus memberikan informasi mengenai diadakannya atau dinaikkannya biaya universitas. Yang diminati adalah biaya-biaya untuk kelas-kelas sarjana dan pasca sarjana. </IN-narr> 
+</top>
+
+<num> C326 </num> 
+<IN-title> Penghargaan Internasional Emmy </IN-title> 
+<IN-desc> Temukan informasi mengenai pemenang-pemenang Penghargaan Emmy 1995 dalam kategori apapun untuk program televisi internasional yang baik. </IN-desc> 
+<IN-narr> Setiap tahun Akademi Internasional dari Seni dan Ilmu Pengetahuan Televisi memberikan Penghargaan Emmy Internasional untuk program-program televisi terbaik yang dihasilkan di luar Amerika. Dokumen-dokumen yang relevan memberikan nama pemenang di setiap atau semua kategori. </IN-narr> 
+</top>
+
+<num> C327 </num> 
+<IN-title> Gempa Bumi di Kota Meksiko </IN-title> 
+<IN-desc> Temukan dokumen-dokumen yang memberikan rincian mengenai pengaruh atau kerusakan yang disebabkan oleh gempa bumi di Kota Meksiko pada 1995. </IN-desc> 
+<IN-narr> Dokumen yang relevan harus berisi informasi tentang gempa bumi di Kota Meksiko pada 1995, seperti kekuatannya, kerusakannya, kepanikan penduduknya, dll. Dokumen-dokumen tentang gempa bumi di tempat-tempat lain di Meksiko tidak relevan kecuali pengaruh getarannya juga dirasakan di Kota Meksiko. </IN-narr> 
+</top>
+
+<num> C328 </num> 
+<IN-title> Orang Kurdi di Irak dan Turki </IN-title> 
+<IN-desc> Temukan dokumen-dokumen yang memberikan rincian dari tindakan-tindakan militer oleh tentara Turki di wilayah Kurdi di Irak. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan melaporkan tentang tindakan-tindakan tentara Turki di wilayah suku Kurdi di Irak utara. Dokumen-dokumen yang memberi informasi umum mengenai hubungan antara orang Turki dan Kurdi adalah tidak relevan. </IN-narr> 
+</top>
+
+<num> C329 </num> 
+<IN-title> Konsekwensi jika Charles dan Diana Bercerai </IN-title> 
+<IN-desc> Apakah suatu perceraian antara Pangeran Charles dan Putri Diana dari Wales mempunyai konsekwensi-konsekwensi sesuai undang-undang dasar? </IN-desc> 
+<IN-narr> Hanya dokumen-dokumen yang mendiskusikan konsekwensi-konsekwensi sesuai undang-undang dasar sebagai akibat dari suatu perceraian antara Pangeran dan Putri dari Wales adalah relevan. </IN-narr> 
+</top>
+
+<num> C330 </num> 
+<IN-title> Film-film dengan Keanu Reeves </IN-title> 
+<IN-desc> Temukan judul-judul film yang dibintangi oleh Keanu Reaves. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan menyebutkan judul film-film dimana Keanu 
+Reaves muncul. Hanya film-film yang telah diputar adalah yang relevan. Film-film yang sedang dibuat bukan yang diminati. Reeves harus secara jelas disebutkan sebagai seorang aktor di film dan bukan produsen atau sutradara. </IN-narr> 
+</top>
+
+<num> C331 </num> 
+<IN-title> Kebijaksanaan-kebijaksanaan Ekonomi dari Zedillo </IN-title> 
+<IN-desc> Temukan informasi tentang kebijaksanaan-kebijaksanaan ekonomi dari Ernesto Zedillo, Presiden Meksiko. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan mendiskusikan kebijaksanaan-kebijaksanaan ekonomi dan keuangan dari Presiden Ernesto Zedillo. Yang diminati adalah dokumen-dokumen yang mendiskusikan devaluasi mata uang Meksiko. Dokumen-dokumen yang hanya menyebutkan Zedillo sebagai penanggung jawab krisis keuangan di Meksiko tanpa memberi rincian mengenai tindakan-tindakannya adalah tidak relevan. </IN-narr> 
+</top>
+
+<num> C332 </num> 
+<IN-title> Penembakan Tupac Shakur </IN-title> 
+<IN-desc> Temukan informasi mengenai penembakan terhadap pemusik rap Tupac Shakur pada November 1994. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan berisi informasi tentang keadaan dimana Tupac Shakur ditembak dan kejadian-kejadian hingga terjadinya penembakan di lantai bawah Studio Rekaman Quad pada November 1994. </IN-narr> 
+</top>
+
+<num> C333 </num> 
+<IN-title> Sidang Pengadilan Paul Touvier </IN-title> 
+<IN-desc> Temukan informasi mengenai sidang pengadilan penjahat perang Perancis, Paul Touvier. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan memberikan informasi mengenai sidang pengadilan Paul Touvier. Touvier diadili dan diputuskan bersalah karena kejahatan kemanusiaan yang dilakukan pada Perang Dunia II. </IN-narr> 
+</top>
+
+<num> C334 </num> 
+<IN-title> Pemilihan George W. Bush </IN-title> 
+<IN-desc> Siapa yang dikalahkan George W. Bush ketika dia terpilih sebagai Gubernur Texas pada 1994? </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan memberi hasil-hasil pemilihan gubernur Texas pada 1994. Hanya dokumen-dokumen yang memberikan nama pemegang jabatan dari partai Demokrat yang dikalahkan oleh Bush adalah yang berhubungan. </IN-narr> 
+</top>
+
+<num> C335 </num> 
+<IN-title> Partai Buruh sesudah John Smith </IN-title> 
+<IN-desc> Apa akibat dari kematian John Smith pada Partai Buruh Inggris? </IN-desc> 
+<IN-narr> Dokumen-dokumen harus mendiskusikan atau memperkirakan masa depan partai Buruh Inggris sesudah kematian pemimpinnya John Smith pada 1994. Yang diminati adalah rincian mengenai perebutan kekuatan antara berbagai arus di partai dan pertarungan antara calon-calon yang akan memimpin. </IN-narr> 
+</top>
+
+<num> C336 </num> 
+<IN-title> Konflik-konflik Buruh NBA </IN-title>
+<IN-desc> Temukan informasi mengenai konflik-konflik buruh yang mengganggu NBA pada 1994 dan 1995. </IN-desc>
+<IN-narr> Konflik-konflik buruh yang relevan termasuk suatu pemogokan oleh wasit-wasit, suatu ancaman pemogokan oleh pemain, dan suatu pelarangan masuk oleh pemilik tim. </IN-narr>
+</top>
+
+<num> C337 </num> 
+<IN-title> Perang Sipil di Yemen </IN-title> 
+<IN-desc> Informasi apapun mengenai Perang Sipil di Yaman pada 1994 adalah yang diminati. </IN-desc> 
+<IN-narr> Dokumen-dokumen adalah yang mendiskusikan percobaan pemisahan Yaman Selatan dari Republik Yaman dan perang sipil singkat yang terjadi. </IN-narr> 
+</top>
+
+<num> C338 </num> 
+<IN-title> Penyerahan Carlos dan Sidang Pengadilan </IN-title> 
+<IN-desc> Temukan informasi tentang penyerahan tawanan dan sidang pengadilan dari teroris yang dikenal sebagai "Carlos si Serigala". </IN-desc> 
+<IN-narr> Dokumen-dokumen melaporkan penyerahan teroris yang dikenal sebagai "Carlos si Serigala" dari Sudan dan sidang pengadilannya di Perancis. Laporan-laporan mengenai kegiatannya tanpa menyebutkan penyerahannya atau sidang pengadilannya adalah tidak relevan. </IN-narr> 
+</top>
+
+<num> C339 </num> 
+<IN-title> Sinn Fein dan Deklarasi Inggeris-Irlandia </IN-title> 
+<IN-desc> Apa reaksi dari Sinn Fein terhadap Deklarasi Inggeris-Irlandia pada 1993? </IN-desc> 
+<IN-narr> Dokumen-dokumen harus melaporkan reaksi Sinn Fein terhadap Deklarasi Bersama antara pemerintah Inggeris dan Irlandia yang dibuat pada Desember 1993 yang menyangkut masa depan Irlandia Utara. </IN-narr> 
+</top>
+
+<num> C340 </num> 
+<IN-title> Perdana Menteri Quebec Yang Baru </IN-title> 
+<IN-desc> Siapa yang terpilih sebagai Perdana Menteri Quebec pada September 1994? </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan memberikan nama pemimpin pemerintahan Quebec yang baru, terpilih pada September 1994. Spekulasi-spekulasi sebelum pemilihan mengenai kemungkinan pemenangnya adalah tidak relevan. </IN-narr> 
+</top>
+
+<num> C341 </num> 
+<IN-title> Pencuri “Jeritan” </IN-title> 
+<IN-desc> Temukan informasi mengenai pencurian lukisan “Jeritan” dari Galeri Nasional Norwegia di Oslo. </IN-desc> 
+<IN-narr> Dokumen-dokumen harus membahas pencurian lukisan di Oslo bulan Febuari 1994. Informasi umum mengenai pencurian lukisan atau pelukisnya bukan yang diminati. 
+</IN-narr> 
+</top>
+
+<num> C342 </num> 
+<IN-title> Empat Perkawinan dan Satu Pemakaman </IN-title> 
+<IN-desc> Temukan laporan mengenai kesuksesan dari film komedi “Empat Perkawinan dan Satu Pemakaman”. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan harus memberikan rincian mengenai kesuksesan atau ketenaran dari film ini. Dokumen-dokumen yang membahas isi cerita adalah tidak relevan. </IN-narr> 
+</top>
+
+<num> C343 </num> 
+<IN-title> Partai Nasional Afrika Selatan </IN-title> 
+<IN-desc> Cari informasi mengenai kampanye dan hasil-hasil dari Partai Nasional pada pemilihan umum Afrika Selatan 1994. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan harus melaporkan mengenai kampanye dari Partai Nasional, usahanya untuk mendekati pemilih baru, dan hasilnya pada pemilihan umum pertama yang diikuti berbagai suku di Afrika Selatan. Rincian mengenai sejarah partai adalah tidak relevan. </IN-narr> 
+</top>
+
+<num> C344 </num> 
+<IN-title> Pertandingan Semifinal Piala Dunia Brasil melawan Swedia </IN-title> 
+<IN-desc> Temukan dokumen mengenai pertandingan semifinal antara Brasil dan Swedia pada Piala Dunia Sepakbola 1994. </IN-desc> 
+<IN-narr> Informasi apapun mengenai pertandingan ini adalah yang diminati, misalnya latihan sebelum pertandingan, gambaran pertandingan, laporan-laporan mengenai angka akhir. Laporan-laporan  mengenai pertandingan pada putaran awal antara Brasil dan Swedia adalah tidak relevan. </IN-narr> 
+</top>
+
+<num> C345 </num> 
+<IN-title> Bermain ski lintas alam pada Pertandingan Olimpiade. </IN-title> 
+<IN-desc> Siapa yang memenangkan acara ski lintas alam pada Pertandingan Olimpiade tahun 1994? </IN-desc> 
+<IN-narr> Dokumen-dokumen harus menyebutkan nama dan kebangsaan dari paling tidak satu pemenang acara ski lintas alam pada Pertandingan Olimpiade pada 1994. Dokumen-dokumen yang hanya menyebutkan nama tim pemenang tanpa menyebutkan nama-nama setiap pemain ski tidak termasuk yang relevan. </IN-narr> 
+</top>
+
+<num> C346 </num> 
+<IN-title> Pemenang Gran Slem </IN-title> 
+<IN-desc> Siapa yang memenangkan acara Turnamen tenis Gren Slem pada 1995? </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan harus melaporkan nama dan kebangsaan paling tidak satu pemenang dari acara tenis Gran Slem pada 1995. </IN-narr> 
+</top>
+
+<num> C347 </num> 
+<IN-title> Film Terbaik Oscar 1994 </IN-title> 
+<IN-desc> Siapa yang memenangkan Oscar untuk film terbaik pada 1994? </IN-desc> 
+<IN-narr> Dokumen-dokumen harus melaporkan nama sutradara dan nama film yang memenangkan penghargaan film terbaik. </IN-narr> 
+</top>
+
+<num> C348 </num> 
+<IN-title> Pembunuhan Yann Piat </IN-title> 
+<IN-desc> Temukan dokumen-dokumen yang mendiskusikan pembunuhan dari politikus sayap kanan Perancis Ibu Yann Piat pada 1994. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan berisi rincian tentang pembunuhan Yann Piat di dekat rumahnya di Toulon pada 1994. </IN-narr> 
+</top>
+
+<num> C349 </num> 
+<IN-title> Kematian Nixon </IN-title> 
+<IN-desc> Temukan dokumen-dokumen yang melaporkan keadaan sakit terakhir dan kematian Richard Nixon pada 1994. </IN-desc> 
+<IN-narr> Dokumen-dokumen yang relevan harus mendiskusikan penyebab sakit terakhir Nixon dan/atau melaporkan kematiannya. </IN-narr> 
+</top>
+
+<num> C350 </num> 
+<IN-title> Kematian Ayrton Senna. </IN-title> 
+<IN-desc> Temukan dokumen-dokumen yang memberitakan kecelakaan fatal yang dialami oleh Ayrton Senna di sirkuit Imola pada 1994. </IN-desc> 
+<IN-narr> Dokumen-dokumen harus melaporkan keadaan yang menyebabkan kematian dari pembalap Gran Prix Ayrton Senna di sirkuit Imola pada 1994. </IN-narr> 
+</top>
