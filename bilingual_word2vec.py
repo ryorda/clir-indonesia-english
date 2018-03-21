@@ -35,6 +35,6 @@ print(len(bilingual_sentences))
 
 for size in [100, 200, 300, 400] :
 	for window in [3, 5, 7, 9] :
-		print('creating model_bilingual_' + str(size) + "_" + str(window) + "...")
+		print('creating model_bilingual_' + str(size) + "_" + str(window) + "_v%s" % sys.argv[1]  + "...")
 		model_en = Word2Vec(bilingual_sentences, size=size, window=window, min_count=5, workers=4)
-		model_en.save('model/model_bilingual_' + str(size) + "_" + str(window) + ".word2vec")
+		model_en.save('model/model_bilingual_' + str(size) + "_" + str(window) + "_v%s" % sys.argv[1] + ".word2vec")

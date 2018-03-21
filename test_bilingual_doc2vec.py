@@ -20,13 +20,13 @@ def test(size, window) :
 	regex_news = [None, re.compile('la[0-9]+')]
 
 	print('load ' + prefix + str(size) + "_" + str(window) + "...")
-	model = Doc2Vec.load('model/' + prefix + str(size) + "_" + str(window) + ".doc2vec")
+	model = Doc2Vec.load('model/' + prefix + str(size) + "_" + str(window) + "_v%s" % sys.argv[1] + ".doc2vec")
 	
 	# sim = Doc2Vec.cosine_similarities(vec1, [vec2])
 	
-	result_title = open('result/' + prefix + str(size) + "_" + str(window) + "_title" + ".txt", 'w', 1, encoding='utf-8')
-	result_desc = open('result/' + prefix + str(size) + "_" + str(window) + "_desc" + ".txt", 'w', 1, encoding='utf-8')
-	result_narr = open('result/' + prefix + str(size) + "_" + str(window) + "_narr" + ".txt", 'w', 1, encoding='utf-8')
+	result_title = open('result/' + prefix + str(size) + "_" + str(window) + "_v%s" % sys.argv[1] + "_title" + ".txt", 'w', 1, encoding='utf-8')
+	result_desc = open('result/' + prefix + str(size) + "_" + str(window) + "_v%s" % sys.argv[1] + "_desc" + ".txt", 'w', 1, encoding='utf-8')
+	result_narr = open('result/' + prefix + str(size) + "_" + str(window) + "_v%s" % sys.argv[1] + "_narr" + ".txt", 'w', 1, encoding='utf-8')
 
 	queries = Queries.Queries()
 	idx = -1
@@ -68,7 +68,7 @@ for size in [100, 200, 300, 400] :
 	for window in [3, 5, 7, 9] :
 		pairs.append((size, window))
 
-pool = Pool(processes=int(sys.argv[1]))  
+pool = Pool(processes=int(sys.argv[2]))  
 pool.starmap(test, pairs)
 
 		
