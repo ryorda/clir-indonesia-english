@@ -70,7 +70,7 @@ unique_docs = open('unique_docs.txt', 'r')
 for w in unique_docs :
 	unique_docs_set.add(w.strip())
 
-print(len(unique_docs))
+print(len(unique_docs_set))
 
 pairs = []
 for size in [100, 200, 300, 400] :
