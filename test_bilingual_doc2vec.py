@@ -7,7 +7,7 @@ from multiprocessing import Pool
 import sys
 from nltk.tokenize import TweetTokenizer
 
-def test(size, window) :
+def test(size, window, unique_docs_set) :
 
 	tokenizer = TweetTokenizer()
 
@@ -44,30 +44,36 @@ def test(size, window) :
 						if '<DOC>' in line :
 							doc = ''
 						elif '</DOC>' in line :
-							sim_title = model.wmdistance(' '.join(tokenizer.tokenize(queries.title.strip().lower())), doc)
-							sim_desc = model.wmdistance(' '.join(tokenizer.tokenize(queries.desc.strip().lower())), doc)
-							sim_narr = model.wmdistance(' '.join(tokenizer.tokenize(queries.narr.strip().lower())), doc)
-
 							docno = regex_docno.search(doc).group(0)
 							docno = regex_docno2.sub('', docno.strip()).strip()
-							print(prefix + str(size) + "_" + str(window) + "_v%s" % sys.argv[1] + '  ' + docno)
 
-							result_title.write(str(idx) + ' ' + docno + ' ' + str(sim_title) + '\n')
-							result_desc.write(str(idx) + ' ' + docno + ' ' + str(sim_desc) + '\n')
-							result_narr.write(str(idx) + ' ' + docno + ' ' + str(sim_narr) + '\n')
+							if docno in unique_docs_set :
+								print(prefix + str(size) + "_" + str(window) + "_v%s" % sys.argv[1] + '  ' + docno)
+								sim_title = model.wmdistance(' '.join(tokenizer.tokenize(queries.title.strip().lower())), doc)
+								sim_desc = model.wmdistance(' '.join(tokenizer.tokenize(queries.desc.strip().lower())), doc)
+								sim_narr = model.wmdistance(' '.join(tokenizer.tokenize(queries.narr.strip().lower())), doc)
+
+								result_title.write(str(idx) + ' ' + docno + ' ' + str(sim_title) + '\n')
+								result_desc.write(str(idx) + ' ' + docno + ' ' + str(sim_desc) + '\n')
+								result_narr.write(str(idx) + ' ' + docno + ' ' + str(sim_narr) + '\n')
+
+							else :
+								print(docno + ' doesn\'t exist on rel judgement')
 						elif '<DOCNO>' in line :
 							doc += '\n' + line.strip()	
 						else :
 							doc += '\n' + ' '.join(tokenizer.tokenize(line.strip().lower()))
 
 
-
-
+unique_docs_set = set()
+unique_docs = open('unique_docs.txt', 'r')
+for w in unique_docs :
+	unique_docs_set.add(w)
 
 pairs = []
 for size in [100, 200, 300, 400] :
 	for window in [3, 5, 7, 9] :
-		pairs.append((size, window))
+		pairs.append((size, window, unique_docs_set))
 
 pool = Pool(processes=int(sys.argv[2]))  
 pool.starmap(test, pairs)
