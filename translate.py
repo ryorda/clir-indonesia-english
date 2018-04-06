@@ -22,7 +22,8 @@ def translate(schema, word) :
 	if (len(head_word) == 0) :
 		return []
 
-	result = [ soup.find_all(class_='translated_headword')[0].get_text() ]
+	main_translate =  regex_hint.sub('', head_word[0].get_text()).strip()
+	result = [ main_translate ]
 	
 	for label in soup.find_all(class_='spanish_label') :
 		text = label.get_text()

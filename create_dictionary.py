@@ -56,7 +56,7 @@ pool = Pool(processes=int(sys.argv[1]))
 # include punctuation
 for tuv in root.iter('tuv'):
 	text 	= tuv.find('seg').text.strip()
-	print("translating '%s' ..." % text)
+	print("translating '%s' ..." % text.encode('utf-8'))
 	token = tokenizer.tokenize(text.lower())	
 	args = []
 	lang = tuv.get('lang')
@@ -64,9 +64,9 @@ for tuv in root.iter('tuv'):
 	for t in token :
 		args.append((t, lang))
 
-	start = time.time()
+	# start = time.time()
 	pool.map(func_translate, args)
-	print('exec %f secs' % start - time.time())
+	# print('exec %f secs' % start - time.time())
 
 
 for k, f in file_writer.items() : 
