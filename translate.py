@@ -36,3 +36,4 @@ def translate(schema, word) :
 
 if __name__ == '__main__' :
 	# print(translate(sys.argv[1], sys.argv[2]))
+	pass
