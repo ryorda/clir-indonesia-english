@@ -19,8 +19,8 @@ stemmer = {
 }
 
 file_writer = {
-	"en" : open('dataset/dictionary-en_id.txt', 'w', encoding='utf-8'),
-	"id" : open('dataset/dictionary-id_en.txt', 'w', encoding='utf-8')	
+	"en" : open('dataset/dictionary-en_id.txt', 'w', encoding='ascii', errors='ignore'),
+	"id" : open('dataset/dictionary-id_en.txt', 'w', encoding='ascii', errors='ignore')	
 }
 
 word_collections = {
@@ -56,7 +56,7 @@ pool = Pool(processes=int(sys.argv[1]))
 # include punctuation
 for tuv in root.iter('tuv'):
 	text 	= tuv.find('seg').text.strip()
-	print("translating '%s' ..." % text.encode('utf-8', errors='ignore').decode('utf-8', errors='ignore'))
+	print("translating '%s' ..." % text.encode('ascii', errors='ignore').decode('ascii', errors='ignore'))
 	token = tokenizer.tokenize(text.lower())	
 	args = []
 	lang = tuv.get('lang')
