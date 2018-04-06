@@ -65,7 +65,10 @@ for tuv in root.iter('tuv'):
 		args.append((t, lang))
 
 	# start = time.time()
-	pool.map(func_translate, args)
+	try :
+		pool.map(func_translate, args)
+	except Exception as e:
+		print(e)
 	# print('exec %f secs' % start - time.time())
 
 
