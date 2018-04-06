@@ -16,7 +16,7 @@ def translate(schema, word) :
 	html = urlopen(url).read()
 	soup = BeautifulSoup(html, "html.parser")
 
-	print('word : %s' % word.encode('ascii', errors='ignore').decode('ascii', errors='ignore'))
+	# print('word : %s' % word.encode('ascii', errors='ignore').decode('ascii', errors='ignore'))
 	head_word = soup.find_all(class_='translated_headword')
 
 	if (len(head_word) == 0) :
@@ -31,8 +31,8 @@ def translate(schema, word) :
 		for t in text.split(",") :
 			result.append(t.strip())
 	
-	print('result : %s' % ",".join(result).encode('ascii', errors='ignore').decode('ascii', errors='ignore'))
+	# print('result : %s' % ",".join(result).encode('ascii', errors='ignore').decode('ascii', errors='ignore'))
 	return result
 
 if __name__ == '__main__' :
-	print(translate(sys.argv[1], sys.argv[2]))
+	# print(translate(sys.argv[1], sys.argv[2]))
