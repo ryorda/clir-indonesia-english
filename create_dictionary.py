@@ -56,7 +56,7 @@ pool = Pool(processes=int(sys.argv[1]))
 # include punctuation
 for tuv in root.iter('tuv'):
 	text 	= tuv.find('seg').text.strip()
-	print("translating '%s' ..." % text.encode('utf-8'))
+	print("translating '%s' ..." % text.encode('utf-8', errors='ignore').decode('utf-8', errors='ignore'))
 	token = tokenizer.tokenize(text.lower())	
 	args = []
 	lang = tuv.get('lang')
