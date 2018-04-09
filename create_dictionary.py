@@ -19,8 +19,14 @@ stemmer = {
 }
 
 file_writer = {
-	"en" : open('dataset/dictionary-en_id.txt', 'w', encoding='utf-8'),
-	"id" : open('dataset/dictionary-id_en.txt', 'w', encoding='utf-8')	
+	"oxford": {
+		"en" : open('dataset/dictionary-en_id.oxford.txt', 'w', encoding='utf-8'),
+		"id" : open('dataset/dictionary-id_en.oxford.txt', 'w', encoding='utf-8')	
+	},
+	"yandex": {
+		"en" : open('dataset/dictionary-en_id.yandex.txt', 'w', encoding='utf-8'),
+		"id" : open('dataset/dictionary-id_en.yandex.txt', 'w', encoding='utf-8')	
+	}
 }
 
 word_collections = {
@@ -35,42 +41,52 @@ def func_translate(args) :
 
 	t = args[0]
 	lang = args[1]
-	schema = 'en_id' if lang == 'en' else 'id_en'
+	schema = 'en-id' if lang == 'en' else 'id-en'
 	st = stemmer[lang]
 
 	t = t.strip()
 	if t not in word_collections[lang] :
 		word_collections[lang].add(t)
-		res = tr.translate(schema, t)
-		file_writer[lang].write(t + '\t'+ ",".join(res) + '\n')
+		# res_oxford = tr.translate_oxford(schema, t)
+		res_yandex = tr.translate_yandex(schema, t)
+		# file_writer['oxford'][lang].write(t + '\t'+ ",".join(res_oxford) + '\n')
+		file_writer['yandex'][lang].write(t + '\t'+ ",".join(res_yandex) + '\n')
 	
 	t2 = st.stem(t)
 	if t2 not in word_collections[lang] :
 		word_collections[lang].add(t2)
-		res = tr.translate(schema, t2)
-		file_writer[lang].write(t2 + '\t'+ ",".join(res) + '\n')
-	file_writer[lang].flush()
+		# res_oxford = tr.translate_oxford(schema, t2)
+		res_yandex = tr.translate_yandex(schema, t2)
+		# file_writer['oxford'][lang].write(t2 + '\t'+ ",".join(res_oxford) + '\n')
+		file_writer['yandex'][lang].write(t2 + '\t'+ ",".join(res_yandex) + '\n')
 
+	# file_writer['oxford'][lang].flush()
+	file_writer['yandex'][lang].flush()
 
-pool = Pool(processes=int(sys.argv[1]))  
-# include punctuation
-for tuv in root.iter('tuv'):
-	text 	= tuv.find('seg').text.strip()
-	# print("translating '%s' ..." % text.encode('utf-8', errors='ignore').decode('utf-8', errors='ignore'))
-	token = tokenizer.tokenize(text.lower())	
-	args = []
-	lang = tuv.get('lang')
+def main() :
+	pool = Pool(processes=int(sys.argv[1]))  
+	# include punctuation
+	for tuv in root.iter('tuv'):
+		text 	= tuv.find('seg').text.strip()
+		# print("translating '%s' ..." % text.encode('utf-8', errors='ignore').decode('utf-8', errors='ignore'))
+		token = tokenizer.tokenize(text.lower())	
+		args = []
+		lang = tuv.get('lang')
 
-	for t in token :
-		args.append((t, lang))
+		for t in token :
+			args.append((t, lang))
 
-	# start = time.time()
-	try :
+		# start = time.time()
+		# try :
 		pool.map(func_translate, args)
-	except Exception as e:
-		print(e)
-	# print('exec %f secs' % start - time.time())
+		# except Exception as e:
+		# 	print(e)
+		# print('exec %f secs' % start - time.time())
+		# sys.exit()
 
 
-for k, f in file_writer.items() : 
-	f.close();
+	for k, f in file_writer.items() : 
+		f.close();
+
+if __name__ == '__main__' :
+	main()
