@@ -7,6 +7,8 @@ from nltk.corpus import stopwords
 import translate as tr
 import time
 from multiprocessing import Pool
+import json
+import os
 
 tree_gv 	= ET.parse('dataset/GlobalVoice-en-id.tmx')
 root 			= tree_gv.getroot()
@@ -20,6 +22,10 @@ stemmer = {
 
 
 def get_dictionary(schema, stemmer) :
+
+	if os.path.isfile('%s.dict' %  schema) :
+		return json.load(open('%s.dict' % schema, 'r'))
+
 	res = {}
 	if schema == 'en-id' :
 		f = open('dataset/dictionary-en_id.txt', 'r')
@@ -37,9 +43,10 @@ def get_dictionary(schema, stemmer) :
 			v.append(stemmer.stem(w))
 
 		res[k] = v
-		print("translate : %s" % k.encode('utf-8').decode('ascii', 'ignore'))
-		print(" ".join(v).encode('utf-8').decode('ascii', 'ignore'))
+		print("translate : %s" % k)
+		print(" ".join(v))
 
+	print(json.dumps(res), file=open('%s.dict' % schema, 'w'))
 	return res
 
 dictionary_from = {
@@ -97,10 +104,10 @@ def construct_pseudo(dictionary_from, stemmer ) :
 	docs = 0
 	for tuv in root.iter('tuv'):
 		
-		print('reading docs %d...' % docs.encode('utf-8').decode('ascii', 'ignore'))
+		print(('reading docs %d...' % docs))
 
 		text 	= tuv.find('seg').text.strip()
-		# print("translating '%s' ..." % text.encode('utf-8', errors='ignore').decode('utf-8', errors='ignore').encode('utf-8').decode('ascii', 'ignore'))
+		# print("translating '%s' ..." % text.encode('utf-8', errors='ignore').decode('utf-8', errors='ignore'))
 		token = tokenizer.tokenize(text.lower())
 		lang = tuv.get('lang')
 
@@ -117,7 +124,7 @@ def construct_pseudo(dictionary_from, stemmer ) :
 
 		docs += 1
 
-	print('randomizing %d docs...' % docs.encode('utf-8').decode('ascii', 'ignore'))
+	print(('randomizing %d docs...' % docs))
 	# dataset = []
 	langs = ["id", "en"]
 	i = 0
@@ -126,9 +133,8 @@ def construct_pseudo(dictionary_from, stemmer ) :
 
 	pool = Pool(sys.argv[1])
 	args = list(zip( np.repeat(f, docs).tolist(), zip(sentence_list['id'], sentence_list['en'])))
-	pool.map(random_pseudo, args)
-		
 
+	pool.map(random_pseudo, args)
 
 if __name__ == '__main__' :
 	construct_pseudo(dictionary_from, stemmer)
