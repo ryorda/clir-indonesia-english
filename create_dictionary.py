@@ -47,20 +47,34 @@ def func_translate(args) :
 	t = t.strip()
 	if t not in word_collections[lang] :
 		word_collections[lang].add(t)
-		# res_oxford = tr.translate_oxford(schema, t)
-		res_yandex = tr.translate_yandex(schema, t)
-		# file_writer['oxford'][lang].write(t + '\t'+ ",".join(res_oxford) + '\n')
-		file_writer['yandex'][lang].write(t + '\t'+ ",".join(res_yandex) + '\n')
+		try :
+			res_yandex = tr.translate_yandex(schema, t)
+			file_writer['yandex'][lang].write(t + '\t'+ ",".join(res_yandex) + '\n')
+		except Exception as e :
+			print(e)
+
+		try :
+			res_oxford = tr.translate_oxford(schema, t)
+			file_writer['oxford'][lang].write(t + '\t'+ ",".join(res_oxford) + '\n')
+		except Exception as e :
+			print(e)
 	
 	t2 = st.stem(t)
 	if t2 not in word_collections[lang] :
 		word_collections[lang].add(t2)
-		# res_oxford = tr.translate_oxford(schema, t2)
-		res_yandex = tr.translate_yandex(schema, t2)
-		# file_writer['oxford'][lang].write(t2 + '\t'+ ",".join(res_oxford) + '\n')
-		file_writer['yandex'][lang].write(t2 + '\t'+ ",".join(res_yandex) + '\n')
+		try :
+			# res_oxford = tr.translate_oxford(schema, t2)
+			# file_writer['oxford'][lang].write(t2 + '\t'+ ",".join(res_oxford) + '\n')
+		except Exception as e :
+			print(e)
 
-	# file_writer['oxford'][lang].flush()
+		try :
+			res_yandex = tr.translate_yandex(schema, t2)
+			file_writer['yandex'][lang].write(t2 + '\t'+ ",".join(res_yandex) + '\n')
+		except Exception as e :
+			print(e)
+
+	file_writer['oxford'][lang].flush()
 	file_writer['yandex'][lang].flush()
 
 def main() :
@@ -77,10 +91,10 @@ def main() :
 			args.append((t, lang))
 
 		# start = time.time()
-		# try :
-		pool.map(func_translate, args)
-		# except Exception as e:
-		# 	print(e)
+		try :
+			pool.map(func_translate, args)
+		except Exception as e:
+			print(e)
 		# print('exec %f secs' % start - time.time())
 		# sys.exit()
 
