@@ -63,8 +63,8 @@ def func_translate(args) :
 	if t2 not in word_collections[lang] :
 		word_collections[lang].add(t2)
 		try :
-			# res_oxford = tr.translate_oxford(schema, t2)
-			# file_writer['oxford'][lang].write(t2 + '\t'+ ",".join(res_oxford) + '\n')
+			res_oxford = tr.translate_oxford(schema, t2)
+			file_writer['oxford'][lang].write(t2 + '\t'+ ",".join(res_oxford) + '\n')
 		except Exception as e :
 			print(e)
 
