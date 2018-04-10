@@ -24,13 +24,13 @@ stemmer = {
 def get_dictionary(schema, stemmer) :
 
 	if os.path.isfile('%s.dict' %  schema) :
-		return json.load(open('%s.dict' % schema, 'r'))
+		return json.load(open('%s.dict' % schema, 'r', encoding='utf-8'))
 
 	res = {}
 	if schema == 'en-id' :
-		f = open('dataset/dictionary-en_id.txt', 'r')
+		f = open('dataset/dictionary-en_id.txt', 'r', encoding='utf-8')
 	elif  schema == 'id-en' :
-		f = open('dataset/dictionary-id_en.txt', 'r')
+		f = open('dataset/dictionary-id_en.txt', 'r', encoding='utf-8')
 	else :
 		return {}
 
@@ -46,7 +46,7 @@ def get_dictionary(schema, stemmer) :
 		print("translate : %s" % k)
 		print(" ".join(v))
 
-	print(json.dumps(res), file=open('%s.dict' % schema, 'w'))
+	print(json.dumps(res), file=open('%s.dict' % schema, 'w', encoding='utf-8'))
 	return res
 
 dictionary_from = {
@@ -102,28 +102,35 @@ def construct_pseudo(dictionary_from, stemmer ) :
 	}
 
 	docs = 0
-	for tuv in root.iter('tuv'):
+	if os.path.isfile('sentence.list') :
+		sentence_list = json.load(open('sentence.list', 'r', encoding='utf-8'))
+
+	else :
+		for tuv in root.iter('tuv'):
+			
+			print(('reading docs %d...' % docs))
+
+			text 	= tuv.find('seg').text.strip()
+			# print("translating '%s' ..." % text.encode('utf-8', errors='ignore').decode('utf-8', errors='ignore'))
+			token = tokenizer.tokenize(text.lower())
+			lang = tuv.get('lang')
+
+			freq = {}
+			word_seq = []
+			for t in token :
+				t = stemmer[lang].stem(t)
+				if t not in freq :
+					freq[t] = 0
+				freq[t] += 1 
+				word_seq.append((t, freq[t]))
+
+			sentence_list[lang].append(word_seq)
+
+			docs += 1
+
+		print(json.dumps(sentence_list), file=open('sentence.list', 'w', encoding='utf-8'))
+		docs /= 2
 		
-		print(('reading docs %d...' % docs))
-
-		text 	= tuv.find('seg').text.strip()
-		# print("translating '%s' ..." % text.encode('utf-8', errors='ignore').decode('utf-8', errors='ignore'))
-		token = tokenizer.tokenize(text.lower())
-		lang = tuv.get('lang')
-
-		freq = {}
-		word_seq = []
-		for t in token :
-			t = stemmer[lang].stem(t)
-			if t not in freq :
-				freq[t] = 0
-			freq[t] += 1 
-			word_seq.append((t, freq[t]))
-
-		sentence_list[lang].append(word_seq)
-
-		docs += 1
-
 	print(('randomizing %d docs...' % docs))
 	# dataset = []
 	langs = ["id", "en"]
