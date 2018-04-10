@@ -37,8 +37,8 @@ def get_dictionary(schema, stemmer) :
 			v.append(stemmer.stem(w))
 
 		res[k] = v
-		print("translate : %s" % k)		
-		print(" ".join(v))		
+		print("translate : %s" % k.encode('utf-8').decode('ascii', 'ignore'))
+		print(" ".join(v).encode('utf-8').decode('ascii', 'ignore'))
 
 	return res
 
@@ -97,10 +97,10 @@ def construct_pseudo(dictionary_from, stemmer ) :
 	docs = 0
 	for tuv in root.iter('tuv'):
 		
-		print('reading docs %d...' % docs)
+		print('reading docs %d...' % docs.encode('utf-8').decode('ascii', 'ignore'))
 
 		text 	= tuv.find('seg').text.strip()
-		# print("translating '%s' ..." % text.encode('utf-8', errors='ignore').decode('utf-8', errors='ignore'))
+		# print("translating '%s' ..." % text.encode('utf-8', errors='ignore').decode('utf-8', errors='ignore').encode('utf-8').decode('ascii', 'ignore'))
 		token = tokenizer.tokenize(text.lower())
 		lang = tuv.get('lang')
 
@@ -117,7 +117,7 @@ def construct_pseudo(dictionary_from, stemmer ) :
 
 		docs += 1
 
-	print('randomizing %d docs...' % docs)
+	print('randomizing %d docs...' % docs.encode('utf-8').decode('ascii', 'ignore'))
 	# dataset = []
 	langs = ["id", "en"]
 	i = 0
