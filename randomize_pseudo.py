@@ -43,8 +43,8 @@ def get_dictionary(schema, stemmer) :
 			v.append(stemmer.stem(w))
 
 		res[k] = v
-		print("translate : %s" % k)
-		print(" ".join(v))
+		# print("translate : %s" % k)
+		# print(" ".join(v))
 
 	print(json.dumps(res), file=open('%s.dict' % schema, 'w', encoding='utf-8'))
 	return res
