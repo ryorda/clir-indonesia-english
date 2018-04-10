@@ -130,7 +130,7 @@ def construct_pseudo(dictionary_from, stemmer ) :
 
 		print(json.dumps(sentence_list), file=open('sentence.list', 'w', encoding='utf-8'))
 		docs /= 2
-		
+
 	print(('randomizing %d docs...' % docs))
 	# dataset = []
 	langs = ["id", "en"]
@@ -138,7 +138,7 @@ def construct_pseudo(dictionary_from, stemmer ) :
 
 	f = open('GV-id_en_tokenized.txt', 'w')
 
-	pool = Pool(sys.argv[1])
+	pool = Pool(int(sys.argv[1]))
 	args = list(zip( np.repeat(f, docs).tolist(), zip(sentence_list['id'], sentence_list['en'])))
 
 	pool.map(random_pseudo, args)
