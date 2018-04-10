@@ -9,6 +9,7 @@ import time
 from multiprocessing import Pool
 import json
 import os
+import numpy as np
 
 tree_gv 	= ET.parse('dataset/GlobalVoice-en-id.tmx')
 root 			= tree_gv.getroot()
