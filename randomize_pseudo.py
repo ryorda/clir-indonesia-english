@@ -86,19 +86,39 @@ def random_pseudo(docpair) :
 					words = copy.deepcopy(s)
 					while idx < length :
 						term = words[idx][0]
+
+						## ori but ordered using stem
+						if sys.argv[2] == 'ori' :
+							term_stem = stemmer[lang].stem(term)
 						term_count = words[idx][1]
-						if term in dictionary_from[lang] :
+
+						checker = None 
+
+						## ori but ordered using stem
+						if sys.argv[2] == 'ori' :
+							checker = term in dictionary_from[lang] or term_stem in dictionary_from[lang]
+						## using stemmed
+						elif sys.argv[2] == 'stemmed' :
+							checker = term in dictionary_from[lang]
+
+						if checker :
 							dic = dictionary_from[lang][term]
 							count = 0
 							for w in t.copy() :
-								if w[0] in dic:
+								checker_target = None
+								if sys.argv[2] == 'ori' :
+									checker_target = w[0] in dic or stemmer[lang].stem(w[0]) in dic
+								elif sys.argv[2] == 'stemmed' :
+									checker_target = w[0] in dic
+
+								if checker_target :
 									count += 1
 								if count == term_count :
 									words[idx][0] = w[0]
 									break
 						idx += skip + 1
 					# dataset.append(words)
-					
+
 					fout.write(" ".join([x[0] for x in words]) + "\n")
 
 	fout.flush()
@@ -110,9 +130,15 @@ def construct_pseudo( stemmer ) :
 		"en" : []
 	}
 
+	sentence_list_doc = None
+	if sys.argv[2] == 'ori' :
+		sentence_list_doc = 'sentence_ori.list'
+	elif sys.argv[2] == 'stemmed' :
+		sentence_list_doc = 'sentence_stemmed.list'
+
 	docs = 0
-	if os.path.isfile('sentence.list') :
-		sentence_list = json.load(open('sentence.list', 'r', encoding='utf-8'))
+	if os.path.isfile(sentence_list_doc) :
+		sentence_list = json.load(open(sentence_list_doc, 'r', encoding='utf-8'))
 		docs = len(sentence_list['id'])
 	else :
 		for tuv in root.iter('tuv'):
@@ -126,18 +152,31 @@ def construct_pseudo( stemmer ) :
 
 			freq = {}
 			word_seq = []
-			for t in token :
-				t = stemmer[lang].stem(t)
-				if t not in freq :
-					freq[t] = 0
-				freq[t] += 1 
-				word_seq.append((t, freq[t]))
+			
+			### stemmed 
+			if sys.argv[2] == 'stemmed' :
+				for t in token :
+					t = stemmer[lang].stem(t)
+					if t not in freq :
+						freq[t] = 0
+					freq[t] += 1 
+					word_seq.append((t, freq[t]))
+
+
+			### ori but ordered using stem
+			if sys.argv[2] == 'ori' :
+				for t in token :
+					t_stem = stemmer[lang].stem(t)
+					if t_stem not in freq :
+						freq[t_stem] = 0
+					freq[t_stem] += 1 
+					word_seq.append((t, freq[t_stem]))
 
 			sentence_list[lang].append(word_seq)
 
 			docs += 1
 
-		print(json.dumps(sentence_list), file=open('sentence.list', 'w', encoding='utf-8'))
+		print(json.dumps(sentence_list), file=open(sentence_list_doc, 'w', encoding='utf-8'))
 		docs /= 2
 
 	# dataset = []
