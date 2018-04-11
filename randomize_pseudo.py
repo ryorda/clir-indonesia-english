@@ -10,6 +10,7 @@ from multiprocessing import Pool
 import json
 import os
 import numpy as np
+import copy
 
 tree_gv 	= ET.parse('dataset/GlobalVoice-en-id.tmx')
 root 			= tree_gv.getroot()
@@ -38,12 +39,13 @@ def get_dictionary(schema, stemmer) :
 	for line in f :
 		sp = line.strip().split("\t")
 		k = sp[0]
-		v = sp[1].split(",") if len(sp) > 1 else []
+		v = set(sp[1].split(",")) if len(sp) > 1 else set()
 
-		for w in v.copy() :
-			v.append(stemmer.stem(w))
+		words = list(v)
+		for w in  words:
+			v.add(stemmer.stem(w))
 
-		res[k] = v
+		res[k] = list(v)
 		# print("translate : %s" % k)
 		# print(" ".join(v))
 
@@ -55,47 +57,53 @@ dictionary_from = {
 	"en" : get_dictionary("en-id", stemmer['id'])
 } 
 
-def random_pseudo(args) :
-	file = args[0]
-	docpair = args[1]
+fout = open('dataset/GV-id_en_tokenized.txt', 'w', encoding='utf-8')
+
+def random_pseudo(docpair) :
+	
 	doc = {
 		"id" : docpair[0],
 		"en" : docpair[1]
 		}
 
+	langs = ["id", "en"]
+	i = 0
 	for l in range(len(langs)) :
 		lang = langs[l]
 		s = doc[lang]
 		t = doc[langs[1 - l]]
+
 		length = len(doc[lang])
 		for skip in range(1, length + 1) :
 			# use original text
 			if skip == length :
 				# dataset.append(list(zip(*doc[lang])[0]))
-				file.write(" ".join(list(zip(*doc[lang])[0])) + "\n")
+				fout.write(" ".join([x[0] for x in doc[lang]]) + "\n")
 			else :
 				max_offset = range(length - skip - 1) if skip < length - 1 else range(length)
 				for offset in max_offset :
 					idx = offset
-					words = s.copy()
+					words = copy.deepcopy(s)
 					while idx < length :
 						term = words[idx][0]
 						term_count = words[idx][1]
-						dic = dictionary_from[lang][term]
-						count = 0
-						for w in t :
-							if w[0] in dic:
-								count += 1
-							if count == term_count :
-								words[idx][0] = w[0]
-								break
-						idx += skip
+						if term in dictionary_from[lang] :
+							dic = dictionary_from[lang][term]
+							count = 0
+							for w in t.copy() :
+								if w[0] in dic:
+									count += 1
+								if count == term_count :
+									words[idx][0] = w[0]
+									break
+						idx += skip + 1
 					# dataset.append(words)
-					file.write(" ".join(words) + "\n")
+					
+					fout.write(" ".join([x[0] for x in words]) + "\n")
 
-	file.flush()
+	fout.flush()
 
-def construct_pseudo(dictionary_from, stemmer ) :
+def construct_pseudo( stemmer ) :
 	# include punctuation
 	sentence_list = {
 		"id" : [],
@@ -105,7 +113,7 @@ def construct_pseudo(dictionary_from, stemmer ) :
 	docs = 0
 	if os.path.isfile('sentence.list') :
 		sentence_list = json.load(open('sentence.list', 'r', encoding='utf-8'))
-
+		docs = len(sentence_list['id'])
 	else :
 		for tuv in root.iter('tuv'):
 			
@@ -132,17 +140,14 @@ def construct_pseudo(dictionary_from, stemmer ) :
 		print(json.dumps(sentence_list), file=open('sentence.list', 'w', encoding='utf-8'))
 		docs /= 2
 
-	print(('randomizing %d docs...' % docs))
 	# dataset = []
-	langs = ["id", "en"]
-	i = 0
 
-	f = open('GV-id_en_tokenized.txt', 'w')
 
 	pool = Pool(int(sys.argv[1]))
-	args = list(zip( np.repeat(f, docs).tolist(), zip(sentence_list['id'], sentence_list['en'])))
+	args = list(zip(sentence_list['id'], sentence_list['en']))
+	print(('randomizing %d docs...' % len(args)))
 
 	pool.map(random_pseudo, args)
 
 if __name__ == '__main__' :
-	construct_pseudo(dictionary_from, stemmer)
+	construct_pseudo(stemmer)

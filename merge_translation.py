@@ -1,12 +1,13 @@
 import os
 import re
 
-dict_prefix = re.compile(r'$dictionary*')
+dict_prefix = re.compile(r'dictionary.*\..*\.txt')
 
 dictionary = {}
 
 for fname in os.listdir('dataset') :
 	if dict_prefix.match(fname) :
+		print('merge ' + fname + '...')
 		dname = fname.split('.')[0]
 		if dname not in dictionary :
 			dictionary[dname] = {}
@@ -22,6 +23,6 @@ for fname in os.listdir('dataset') :
 				dictionary[dname][key].add(w)
 
 for key, vocabs in dictionary.items() :
-	f = open('dataset/%s.txt' % key, 'w')
+	f = open('dataset/%s.txt' % key, 'w', encoding='utf-8')
 	for vocab, translation in vocabs.items() :
 		f.write("%s\t%s\n" % (vocab, ",".join(list(translation))) )
