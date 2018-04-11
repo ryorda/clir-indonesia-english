@@ -102,7 +102,14 @@ def random_pseudo(docpair) :
 							checker = term in dictionary_from[lang]
 
 						if checker :
-							dic = dictionary_from[lang][term]
+							if sys.argv[2] == 'ori' :
+								if term in dictionary_from[lang] :
+									dic = dictionary_from[lang][term]
+								else :
+									dic = dictionary_from[lang][term_stem]
+							else :
+								dic = dictionary_from[lang][term]
+
 							count = 0
 							for w in t.copy() :
 								checker_target = None
@@ -160,7 +167,7 @@ def construct_pseudo( stemmer ) :
 					if t not in freq :
 						freq[t] = 0
 					freq[t] += 1 
-					word_seq.append((t, freq[t]))
+					word_seq.append([t, freq[t]])
 
 
 			### ori but ordered using stem
@@ -170,7 +177,7 @@ def construct_pseudo( stemmer ) :
 					if t_stem not in freq :
 						freq[t_stem] = 0
 					freq[t_stem] += 1 
-					word_seq.append((t, freq[t_stem]))
+					word_seq.append([t, freq[t_stem]])
 
 			sentence_list[lang].append(word_seq)
 

@@ -4,8 +4,8 @@ import sys
 
 tokenizer = WhitespaceTokenizer()
 
-en_doc = open('dataset/GV-en_tokenized%s.txt' % sys.argv[1], 'r')
-id_doc = open('dataset/GV-id_tokenized%s.txt' % sys.argv[1], 'r')
+en_doc = open('dataset/GV-en_tokenized%s.txt' % sys.argv[1], 'r', encoding='utf-8')
+id_doc = open('dataset/GV-id_tokenized%s.txt' % sys.argv[1], 'r', encoding='utf-8')
 
 en_sentences = []
 id_sentences = []
