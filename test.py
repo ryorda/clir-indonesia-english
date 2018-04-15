@@ -1,8 +1,12 @@
-from zeep import Client
-import xml.etree.ElementTree as ET
+from multiprocessing import Pool
 
-client = Client("http://fws.cs.ui.ac.id/RESTFulWSStanfordPOSTagger/POSTagger?wsdl")
+file = open('test.txt', 'w')
+def test(n) :
+	for _ in range(n) :
+		file.write('x\n')
+		file.flush()
 
-response = client.service.getPOSTag("saya makan nasi")
-tree = ET.fromstring(response)
-print(ET.tostring(tree, encoding='utf8', method='xml'))
+pool = Pool(3)
+it = [100, 200, 300, 400]
+
+pool.map(test, it)

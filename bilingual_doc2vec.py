@@ -17,7 +17,7 @@ for line in bil_doc :
 	bil_sentences.append(LabeledSentence(words=bil_tokens, tags=['bil_' + str(idx)]))
 
 
-for size in [100, 200, 300, 400] :
+for size in [300, 400] :
 	for window in [1, 3, 5, 7] :
 		print('creating model_bil_s' + str(size) + "_w" + str(window) + "_v" + str(sys.argv[1])  + "...")
 		model_bil = Doc2Vec(bil_sentences, size=size, window=window, min_count=5, workers=4)
