@@ -26,7 +26,7 @@ for d in os.listdir('dataset/doc_query/clean/en_id/{0}/'.format(mode)) :
 	f = open('dataset/doc_query/clean/en_id/{0}/{1}'.format(mode, d), encoding='utf-8', errors='ignore')
 	for line in f:
 		words += line.strip().split()
-	documents.append(LabeledSentence(words=words, tags=['pardoc_' + str(doc_id)]))
+	documents.append(LabeledSentence(words=words, tags=['pardoc:' + d]))
 
 
 print("docs : %d" % len(documents))
