@@ -19,8 +19,8 @@ print('running with mode %d' % mode)
 # lowercase
 if mode == 1 : 
 	for d in os.listdir('dataset/GlobalVoices/extracted_raw/en_id') :
-		fout = open('dataset/doc_query/clean/en_id/{0}/{1}'.format(mode, d), 'w')
-		f = open('dataset/GlobalVoices/extracted_raw/en_id/{0}'.format(d), 'r')
+		fout = open('dataset/doc_query/clean/en_id/{0}/{1}'.format(mode, d), 'w', encoding='utf-8')
+		f = open('dataset/GlobalVoices/extracted_raw/en_id/{0}'.format(d), 'r', encoding='utf-8')
 		for line in f :
 			text = line.strip().lower()
 			fout.write(text + "\n")
@@ -30,8 +30,8 @@ if mode == 1 :
 #lowercase + convert all non-alphanumeric to space
 elif mode == 2 :
 	for d in os.listdir('dataset/GlobalVoices/extracted_raw/en_id') :
-		fout = open('dataset/doc_query/clean/en_id/{0}/{1}'.format(mode, d), 'w')
-		f = open('dataset/GlobalVoices/extracted_raw/en_id/{0}'.format(d), 'r')
+		fout = open('dataset/doc_query/clean/en_id/{0}/{1}'.format(mode, d), 'w', encoding='utf-8')
+		f = open('dataset/GlobalVoices/extracted_raw/en_id/{0}'.format(d), 'r', encoding='utf-8')
 		for line in f :
 			text = line.strip().lower()
 			text = re_clean.sub(' ', text)
@@ -44,8 +44,8 @@ elif mode == 3 :
 
 	for d in os.listdir('dataset/GlobalVoices/extracted_raw/en_id') :
 		idx = 0 # first is id, then if we found blank become english
-		fout = open('dataset/doc_query/clean/en_id/{0}/{1}'.format(mode, d), 'w')
-		f = open('dataset/GlobalVoices/extracted_raw/en_id/{0}'.format(d), 'r')
+		fout = open('dataset/doc_query/clean/en_id/{0}/{1}'.format(mode, d), 'w', encoding='utf-8')
+		f = open('dataset/GlobalVoices/extracted_raw/en_id/{0}'.format(d), 'r', encoding='utf-8')
 		for line in f :
 			text = line.strip().lower()
 			if not text :
@@ -68,8 +68,8 @@ elif mode == 4 :
 
 	for d in os.listdir('dataset/GlobalVoices/extracted_raw/en_id') :
 		idx = 0 # first is id, then if we found blank become english
-		fout = open('dataset/doc_query/clean/en_id/{0}/{1}'.format(mode, d), 'w')
-		f = open('dataset/GlobalVoices/extracted_raw/en_id/{0}'.format(d), 'r')
+		fout = open('dataset/doc_query/clean/en_id/{0}/{1}'.format(mode, d), 'w', encoding='utf-8')
+		f = open('dataset/GlobalVoices/extracted_raw/en_id/{0}'.format(d), 'r', encoding='utf-8')
 		for line in f :
 			if not line :
 				idx += 1

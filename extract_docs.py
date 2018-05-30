@@ -19,7 +19,7 @@ id_docs = set()
 en_docs = set()
 doc_pairs = set()
 
-list_doc = open('dataset/GlobalVoices/en-id.txt/GlobalVoices.en-id.ids', 'r')
+list_doc = open('dataset/GlobalVoices/en-id.txt/GlobalVoices.en-id.ids', 'r', encoding='utf-8')
 for d in list_doc:
 	id_doc = d.strip().split()[1].split('/')[1]
 	id_docs.add(id_doc)
@@ -39,8 +39,8 @@ regex_empty = re.compile(r'$^[\n\r]+', re.M)
 for d in os.listdir('dataset/GlobalVoices/raw/id') :
 	if d in id_docs :
 		print('dataset/GlobalVoices/raw/id/%s' % d)
-		fout = open('dataset/GlobalVoices/extracted_raw/id/%s.raw' % d.strip().split('.')[0], 'w')
-		with open('dataset/GlobalVoices/raw/id/%s' % d, 'rb') as f:
+		fout = open('dataset/GlobalVoices/extracted_raw/id/%s.raw' % d.strip().split('.')[0], 'w', encoding='utf-8')
+		with open('dataset/GlobalVoices/raw/id/%s' % d, 'rb', encoding='utf-8') as f:
 			extract(f, fout)
 		fout.close()
 
@@ -48,8 +48,8 @@ for d in os.listdir('dataset/GlobalVoices/raw/id') :
 for d in os.listdir('dataset/GlobalVoices/raw/en') :
 	if d in en_docs :
 		print('dataset/GlobalVoices/raw/en/%s' % d)
-		fout = open('dataset/GlobalVoices/extracted_raw/en/%s.raw' % d.strip().split('.')[0], 'w')
-		with open('dataset/GlobalVoices/raw/en/%s' % d, 'rb') as f:
+		fout = open('dataset/GlobalVoices/extracted_raw/en/%s.raw' % d.strip().split('.')[0], 'w', encoding='utf-8')
+		with open('dataset/GlobalVoices/raw/en/%s' % d, 'rb', encoding='utf-8') as f:
 			extract(f, fout)
 		fout.close()
 
@@ -60,9 +60,9 @@ for d in doc_pairs :
 	en_doc = d.split(":")[0]
 	doc_name = en_doc
 	print('dataset/GlobalVoices/raw/en_id/%s' % doc_name)
-	fout = open('dataset/GlobalVoices/extracted_raw/en_id/%s.raw' % doc_name, 'w')
-	with open('dataset/GlobalVoices/raw/id/%s' % id_doc, 'rb') as f:
+	fout = open('dataset/GlobalVoices/extracted_raw/en_id/%s.raw' % doc_name, 'w', encoding='utf-8')
+	with open('dataset/GlobalVoices/raw/id/%s' % id_doc, 'rb', encoding='utf-8') as f:
 		extract(f, fout)
-	with open('dataset/GlobalVoices/raw/en/%s' % en_doc, 'rb') as f:
+	with open('dataset/GlobalVoices/raw/en/%s' % en_doc, 'rb', encoding='utf-8') as f:
 		extract(f, fout)
 	fout.close()
