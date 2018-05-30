@@ -71,11 +71,12 @@ for i in range(len(news)) :
 
 print("docs : %d" % len(en_doc))
 
-pool = Pool(int(sys.argv[2]))
+# pool = Pool(int(sys.argv[2]))
 
-args = []
+# args = []
 for size in [100, 200, 300, 400] :
 	for window in [1, 3, 5, 7] :
-		args.append((en_doc, size, window, mode))
+		# args.append((en_doc, size, window, mode))
+		create_model(en_doc, size, window, mode)
 
-pool.starmap(create_model, args)
+# pool.starmap(create_model, args)
