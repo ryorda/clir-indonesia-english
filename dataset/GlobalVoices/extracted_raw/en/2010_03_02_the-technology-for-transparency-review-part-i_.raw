@@ -1,0 +1,73 @@
+The Technology for Transparency Review, Part I · Global Voices
+Last month The Economist published a useful overview of how governments, geeks, and activists are coming together to make politics more transparent, elected officials held more accountable, and citizens more involved in shaping debate and policy.
+To illustrate their point The Economist pointed readers to the Sunlight Foundation based in Washington DC, Britain's data.gov.uk, New Zealand's data.govt.nz and MashupAustralia, a competition organized by Australia's "Government 2.0 Taskforce" to encourage the development of applications that make effective use of public data to improve governance.
+It makes a great deal of sense for The Economist to focus their attention on the US, UK, New Zealand, and Australia; all four countries have relatively high rates of internet penetration and their federal governments have shown a commitment to publishing government data in machine readable format, which can then be analyzed and re-used on websites with interactive visualizations.
+But what is happening in other countries around the world where, for example, citizens might be more concerned about police bribery than campaign finance reform?
+Over a three-month period eight researchers and eight research reviewers from Latin America, Sub-Saharan Africa, Southeast Asia, South Asia, China, and Central & Eastern Europe will document around 40 case studies of technology projects that aim to promote transparency, accountability, and civic engagement.
+Every two weeks we will publish an overview of their last eight case studies with the goal of promoting conversation and coming to a deeper understanding of how technology can be used to improve governance in developing democracies.
+Bloggers Adopt Politicians in Brazil
+Let's begin in Brazil where a pro-democracy civil society organization inspired a well known muckraking radio journalist who in turn challenged Brazilian bloggers to each "adopt a local politician" in order to keep an eye on their work and hold them accountable.
+Dozens of bloggers joined immediately, but it wasn't until Everton Zanella, a web developer based in Sao Paulo, decided to list and categorize all these activist bloggers that the phenomenon turned into a cohesive movement.
+Our Brazil-based researcher, Manuella Maia Ribeiro, sat down with Zanella to interview him about the successes and challenges of the project.
+Fabiano Angelico, our research reviewer who is also based in Sao Paulo, congratulates the project for its focus on local accountability when so many of these types of projects are focused only on federal governments.
+But he still feels that there is "room for a more efficient approach" and suggests that the bloggers should pick a monthly topic and try to raise awareness and advocate for more government data related to that one topic.
+He also suggests that the project should encourage its participant bloggers to interact more with journalists, civil society organizations, and universities.
+It is worth noting that a similar "adopt a politician" campaign began in Peru in 2008 when the well known journalist Rosa María Palacios asked citizens to mount pressure in order to get information about the operational expenses of national congressmen.
+Juan Arellano wrote an in-depth review of the project, which is no longer active (though still has 1,500 members on Facebook) following an overwhelming resistance by most congressmen.
+Promoting Collaboration Among Human Rights Groups in Cambodia
+Cambodia has among the highest number of NGO's per capita anywhere in the world.
+There are dozens of organizations throughout the country publishing information about human rights and human rights abuses, but they tend to file these reports on their individual websites or, worse, in lengthy PDF reports that are sent via email to their funders.
+With the goal of promoting more collaboration among human rights, organizations the Cambodian Center for Human Rights has launched Sithi.org, a map-based visualization and archive of human rights violations and related news which can be filtered by category and sub-category.
+Preetam Rai, our research reviewer for Southeast Asia suggests that Sithi.org make contact with Cambodian bloggers to spread more awareness about the initiative outside of just the human rights activist community.
+By distributing their data via Facebook and Twitter - and by presenting the project at local tech meetups - they are more likely to attract the interest of Cambodia's enthusiastic 20-something generation of techies.
+Lastly, Preetam recommends giving more visible attribution to the organizations that contribute reports to the map so that there is more of an incentive to do so.
+A Twitter Tag Protest in Mexico
+Can a single tag on Twitter reverse a bad policy decision by federal senators?
+In Mexico "#InternetNecesario" seemed to do just that, eliminating a law that was approved by Mexico's Chamber of Deputies to impose a three percent tax on internet access.
+But can Mexico's extensive community of Twitterers use the platform to influence policy that affects more than just their beloved internet?
+So far we haven't found any examples, but anyone interested in organizing a political advocacy campaign via Twitter would be well served by reading this case study by Renata Avila.
+She speaks with Oscar Salazar, Alberto Bustamante, and Homero Fernandez about some of the opportunities and challenges when it comes to distilling useful information from an avalanche of Twitter messages and then turning that information into offline political change.
+Laura Vidal, our research reviewer for Latin America, comments that #InternetNecesario is an example of what she feels is an increasing trend of citizens taking in the slack when governments fail to consult with civil society and mainstream media fails to hold up a magnifying glass to their actions.
+Better Government Through Better Maps
+How we govern the land, people, resources, housing, and businesses of our communities depends on our perception of the physical space they occupy.
+"Kibera, a slum in Nairobi, Kenya, has its roots in the first World War," writes Rebekah Heacock, when "the colonial government gave returning Kenyan soldiers land outside of the city center.
+After Kenya's independence in 1963, new land policies made Kibera into an illegal settlement.
+Despite this, the area has continued to grow.
+It now houses as many as 1.2 million people and is widely considered to be one of Africa's largest slums."
+But until recently Kibera was largely "a blank spot on the Kenyan map" and aid organizations in the area did not share information with each other or the community at large.
+Map Kibera, a project started by Erica Hagen and Mikel Maron of Open Street Map, aims to change that dynamic by getting residents of Kibera more involved in creating maps of their own community and publishing information and news about infrastructure and services that are both available and needed.
+Kibera resident Douglas Namale says in a video published with the case study that the planning department has historically not had adequate geographic information about Kibera which has resulted in poor sanitation services.
+The collaboratively produced map of Kibera has been integrated into the Ushahidi-based Voice of Kibera, a website that tracks news from Kibera and locates it on a map interface.
+Readers can subscribe to updates via text message and/or email.
+Hagen and Maron - both Americans - are committed to staying in Kenya until at least August, but they recognize the importance of long-term attention until the project becomes sustainable and completely managed by local Kibera residents.
+Comparing the Promises and Performance of Politicians in Mumbai, India
+Vivek Gilani, the founder of MumabaiVotes.com was tired of seeing his family and friends vote for their representatives based on the promises candidates made in the lead-up to elections rather than their actual performance while in office.
+In 2004 he began building up an archive of media coverage that tracks what local politicians promised during elections and what they actually achieved once in office.
+The website now includes an impressive archive of articles and videos categorized by politician, political party, and voting district.
+Not every politician has a complete profile on the website, but many do.
+I chose a few names at random and searched for information about them on Google; their MumbaiVotes.com profile was almost always the first search result, providing a more comprehensive overview of the politician than could be found in a single article or, most certainly, the politician's own website.
+In her review comment Aparna Ray points us to Praja.org, a similar project based in Mumbai which tracks the attendance, related issues, and financial assets and liabilities of the city's elected politicians.
+Both projects are pieces to a larger puzzle, but it would be nice if they shared data so that readers have a more comprehensive overview of the performance, risks, and potential biases of their elected officials.
+Aparna also applauds MumbaiVotes for their offline outreach, university partnerships, and plans to print out and distribute a voter's guide in the lead-up to elections.
+From "Not In My Backyard" to Greater Environmental Awareness
+Without any doubt, China presents special circumstances when it comes to documenting online projects that promote transparency, accountability, and civic engagement.
+Online activity is highly regulated in China and website administrators must adhere to a strict policy of what can and cannot be published online.
+The difficulty of walking this line is intimated by a moderator of Jiang-Wai-Jiang, a community forum for residents living in Lijiang Garden, Baiyun District, Guangzhou.
+Lijiang Garden's mostly upper-class residents used the forum to disseminate information and organize protests against a proposed waste incinerator that the government was planning to construct nearby.
+Through coordinated efforts on the forum they "wrote proposals to relevant government departments, printed T-shirts with slogans, and demonstrated in front of the local supermarket," writes Carrie Yang, our China regional researcher.
+Local authorities finally yielded to the protesters and announced that the incinerator would not be built in Lijiang Garden.
+The moderator of the forum, however, says that the online discussions led to more than just your standard "not in my backyard" activism: residents gained a greater understanding of the China's garbage problem and have begun discussing how the community can become more ecologically sustainable.
+Networking Civil Society Organizations in Zimbabwe
+Finally, we end in Zimbabwe where Kubatana.net was founded in 2001 to promote greater cooperation and information sharing among civil society organizations and with the general Zimbabwean public.
+Victor Kaonga spoke with Bev Clark and Amanda Atwood from Kubatana to learn more about how they aggregate information from civil society organizations and shape it into campaigns to change policy.
+Their website now lists profile pages for more than 230 NGO's, stores an archive of 15,000 documents related to civil society, and claims a mailing list of around 18,000 people.
+Still, examples of concrete, offline change as a result of the information collected and disseminated on Kubatana remain relatively scarce.
+We are informed, however, of a recent campaign to encourage Transparency International Zimbabwe to investigate the use of revenue from toll booths which are cropping up on roads and highways around the country.
+Conclusion: Small Wins, Tough Longterm Projects
+Our first round of case studies show us that online platforms like Discuz!, the Chinese software that powers the Jiang-Wai-Jiang community forum, or Twitter in the case of the "#InternetNecesario" campaign, can be used effectively to reverse government policy decisions and stimulate debate about important issues like waste removal and internet access.
+But both examples also reveal that such campaigns often depend on stirring the inspiration of those who are most likely to be negatively affected by the policy.
+The other five case studies - Adopt a Local Politician, Sithi.org, Map Kibera, MumbaiVotes.com, and Kubatana - reveal the multiple challenges when it comes to building a sustainable community of citizen activists who are willing to regularly publish and disseminate information related to their elected officials and civic issues.
+Mere internet access is one challenge, as we witnessed with Sithi.org, but basic education about the responsibilities of government and elected officials is another major challenge to the success of projects like Adopt a Local Politician in Brazil.
+Two weeks from now we'll be back with another review of case studies from Latin America, Sub-Saharan Africa, Southeast Asia, South Asia, China, and Central & Eastern Europe.
+You can subscribe to our almost daily podcast of interviews with the leaders of these projects and follow us on Twitter for more updates and links to interesting news stories.
+
