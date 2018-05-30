@@ -16,6 +16,7 @@ re_clean = re.compile(r'[^A-Za-z0-9]', re.M)
 mode = int(sys.argv[1])
 
 print('running with mode %d' % mode)
+
 # lowercase
 if mode == 1 : 
 	for d in os.listdir('dataset/GlobalVoices/extracted_raw/en_id') :
