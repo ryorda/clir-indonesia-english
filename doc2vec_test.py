@@ -8,6 +8,7 @@ from multiprocessing import Pool
 from nltk.stem.porter import *
 from nltk.corpus import stopwords
 import string
+from multiprocessing import Pool
 
 mode = int(sys.argv[1])
 
@@ -70,7 +71,11 @@ for i in range(len(news)) :
 
 print("docs : %d" % len(en_doc))
 
+pool = Pool(int(sys.argv[2]))
 
+args = []
 for size in [100, 200, 300, 400] :
 	for window in [1, 3, 5, 7] :
-		create_model(en_doc, size, window, mode)
+		args.append((en_doc, size, window, mode))
+
+pool.starmap(create_model, args)
