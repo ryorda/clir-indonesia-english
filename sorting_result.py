@@ -2,6 +2,8 @@ import sys
 import os
 from multiprocessing import Pool
 
+folder = sys.argv[3]
+
 def sorting(d) :
 	f = open(os.path.abspath('result/{0}/{1}'.format(folder, d)), 'r', encoding='utf-8')
 
@@ -31,7 +33,6 @@ def sorting(d) :
 	print('processing ' + d + ' [done]')
 
 pool = Pool(int(sys.argv[2]))
-folder = sys.argv[3]
 
 pool.map(sorting, os.listdir('result/'))
 	
