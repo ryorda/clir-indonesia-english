@@ -24,7 +24,7 @@ def sorting(d) :
 
 
 	res = open(os.path.abspath('proc_result/{0}/proc_{1}'.format(folder, d), 'w', encoding='utf-8')
-	for (k, v) in docs.iteritems() : 	
+	for (k, v) in list(docs.items()):
 		for idx in range(min(int(sys.argv[1]), len(v))) :
 			res.write('%s Q0 %s %d %f NH-BM25\n' % (k, v[idx][1], idx, float(v[idx][0])))
 
