@@ -14,14 +14,15 @@ sw = [ set(stopwords.words('indonesian')), set(stopwords.words('english'))]
 re_clean = re.compile(r'[^A-Za-z0-9]', re.M)
 
 mode = int(sys.argv[1])
+dataset = sys.argv[2]
 
 print('running with mode %d' % mode)
 
 # lowercase
 if mode == 1 : 
-	for d in os.listdir('dataset/GlobalVoices/extracted_raw/en_id') :
+	for d in os.listdir('dataset/{0}/extracted_raw/en_id'.format(dataset)) :
 		fout = open('dataset/doc_query/clean/en_id/{0}/{1}'.format(mode, d), 'w', encoding='utf-8')
-		f = open('dataset/GlobalVoices/extracted_raw/en_id/{0}'.format(d), 'r', encoding='utf-8')
+		f = open('dataset/{0}/extracted_raw/en_id/{1}'.format(dataset, d), 'r', encoding='utf-8')
 		for line in f :
 			text = line.strip().lower()
 			fout.write(text + "\n")
@@ -30,9 +31,9 @@ if mode == 1 :
 
 #lowercase + convert all non-alphanumeric to space
 elif mode == 2 :
-	for d in os.listdir('dataset/GlobalVoices/extracted_raw/en_id') :
+	for d in os.listdir('dataset/{0}/extracted_raw/en_id'.format(dataset)) :
 		fout = open('dataset/doc_query/clean/en_id/{0}/{1}'.format(mode, d), 'w', encoding='utf-8')
-		f = open('dataset/GlobalVoices/extracted_raw/en_id/{0}'.format(d), 'r', encoding='utf-8')
+		f = open('dataset/{0}/extracted_raw/en_id/{1}'.format(dataset, d), 'r', encoding='utf-8')
 		for line in f :
 			text = line.strip().lower()
 			text = re_clean.sub(' ', text)
@@ -43,10 +44,10 @@ elif mode == 2 :
 #lowercase + convert all non-alphanumeric to space + remove stopwords
 elif mode == 3 :
 
-	for d in os.listdir('dataset/GlobalVoices/extracted_raw/en_id') :
+	for d in os.listdir('dataset/{0}/extracted_raw/en_id'.format(dataset)) :
 		idx = 0 # first is id, then if we found blank become english
 		fout = open('dataset/doc_query/clean/en_id/{0}/{1}'.format(mode, d), 'w', encoding='utf-8')
-		f = open('dataset/GlobalVoices/extracted_raw/en_id/{0}'.format(d), 'r', encoding='utf-8')
+		f = open('dataset/{0}/extracted_raw/en_id/{1}'.format(dataset, d), 'r', encoding='utf-8')
 		for line in f :
 			text = line.strip().lower()
 			if not text :
@@ -67,10 +68,10 @@ elif mode == 3 :
 #lowercase + convert all non-alphanumeric to space + stemmed
 elif mode == 4 :
 
-	for d in os.listdir('dataset/GlobalVoices/extracted_raw/en_id') :
+	for d in os.listdir('dataset/{0}/extracted_raw/en_id'.format(dataset)) :
 		idx = 0 # first is id, then if we found blank become english
 		fout = open('dataset/doc_query/clean/en_id/{0}/{1}'.format(mode, d), 'w', encoding='utf-8')
-		f = open('dataset/GlobalVoices/extracted_raw/en_id/{0}'.format(d), 'r', encoding='utf-8')
+		f = open('dataset/{0}/extracted_raw/en_id/{1}'.format(dataset, d), 'r', encoding='utf-8')
 		for line in f :
 			if not line :
 				idx += 1
