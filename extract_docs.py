@@ -24,9 +24,9 @@ dataset = sys.argv[1]
 
 list_doc = open('dataset/{0}/en-id.txt/{0}.en-id.ids'.format(dataset), 'r', encoding='utf-8')
 for d in list_doc:
-	id_doc = d.strip().split()[1].split('/')[1]
+	id_doc = d.strip().split("\t")[1].split('/')[1]
 	id_docs.add(id_doc)
-	en_doc = d.strip().split()[0].split('/')[1]
+	en_doc = d.strip().split("\t")[0].split('/')[1]
 	en_docs.add(en_doc)
 	doc_pairs.add(en_doc + ":" + id_doc)
 
