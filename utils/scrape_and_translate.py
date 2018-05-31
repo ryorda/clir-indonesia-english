@@ -36,11 +36,16 @@ tr.set_from_lang('en')
 tr.set_to_lang('id')
 
 
+idx = 0
 for record in cur :
-	content = re_blank.sub('\n', record[2])
+	content = re_blank.sub('\n', record[2].strip())
+	title = record[4].strip()
+
+	print('translating doc-{0} ...'.format(idx))
+	idx += 1
 	
-	fout_id = open('dataset/{0}/extracted_raw/id/{1}.raw'.format(source, record[4]), 'w', encoding='utf-8')
-	fout_en = open('dataset/{0}/extracted_raw/en/{1}.raw'.format(source, record[4]), 'w', encoding='utf-8')
+	fout_id = open('dataset/{0}/extracted_raw/id/{1}.raw'.format(source, title), 'w', encoding='utf-8')
+	fout_en = open('dataset/{0}/extracted_raw/en/{1}.raw'.format(source, title), 'w', encoding='utf-8')
 	
 	fout_id.write(content)
 	fout_id.write("\n")
