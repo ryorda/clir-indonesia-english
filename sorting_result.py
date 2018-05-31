@@ -34,5 +34,5 @@ def sorting(d) :
 
 pool = Pool(int(sys.argv[2]))
 
-pool.map(sorting, os.listdir('result/'))
+pool.map(sorting, os.listdir('result/{0}/'.format(folder)))
 	
