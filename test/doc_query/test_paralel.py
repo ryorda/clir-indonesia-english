@@ -94,7 +94,7 @@ for k in keys :
 		vec_paralel = doc2vec_paralel.infer_vector(q)
 		docs_paralel = doc2vec_paralel.docvecs.most_similar(positive = [vec_paralel], topn = topn_paralel)
 		doc_query = []
-		print('most similar documents to query {0} :'.format(idx))
+		print('most similar documents to {1} of query {0} :'.format(idx, k))
 		for (d_par, _) in docs_paralel :
 			d_par_name = d_par.split(":")[1].strip()
 			print('\t - {0}'.format(d_par_name))
