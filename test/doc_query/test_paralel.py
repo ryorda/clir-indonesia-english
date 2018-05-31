@@ -11,10 +11,11 @@ import time
 import numpy as np
 import tensorflow as tf
 from nltk.corpus import stopwords
-from nltk.stem.porter import *
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
-en_stemmer = PorterStemmer()
-en_stops = set(stopwords.words('english'))
+factory = StemmerFactory()
+id_stemmer = factory.create_stemmer()
+id_stops = set(stopwords.words('indonesian'))
 
 re_clean = re.compile(r'[^A-Za-z0-9]', re.M)
 
@@ -27,20 +28,20 @@ topn_test = int(sys.argv[5])
 doc2vec_paralel = Doc2Vec.load('model/doc_query/model_paralel_s%d_w%d_v%d.doc2vec' % (size, window, mode))
 doc2vec_test = Doc2Vec.load('model/doc_query/model_en_test_s%d_w%d_v%d.doc2vec' % (size, window, mode))
 
-def get_english_queries() :
+def get_indonesia_queries() :
 		
-		queries_en = Queries.Queries('EN')
+		queries_id = Queries.Queries('IN')
 		queries = { 
 			'title' : [],
 			'desc' : [],
 			'narr' : []
 		}
-		while queries_en.hasnext() :
-			queries_en.next()
+		while queries_id.hasnext() :
+			queries_id.next()
 			qs = [
-				queries_en.title.strip().lower(),
-				queries_en.desc.strip().lower(),
-				queries_en.narr.strip().lower()
+				queries_id.title.strip().lower(),
+				queries_id.desc.strip().lower(),
+				queries_id.narr.strip().lower()
 			]
 			keys = [ 'title', 'desc', 'narr']
 
@@ -59,7 +60,7 @@ def get_english_queries() :
 				for i in range(len(qs)) :
 					text = []
 					for t in qs[i].split() :
-						if t not in en_stops :
+						if t not in id_stops :
 							text.append(t)
 					qs[i] = text
 
@@ -67,7 +68,7 @@ def get_english_queries() :
 				for i in range(len(qs)) :
 					text = []
 					for t in qs[i].split() :
-						text.append(en_stemmer.stem(t))
+						text.append(id_stemmer.stem(t))
 					qs[i] = text				
 			else :
 				print ('[ERROR] invalid mode')
@@ -81,7 +82,7 @@ def get_english_queries() :
 
 		return queries
 
-queries = get_english_queries()
+queries = get_indonesia_queries()
 keys = [ 'title', 'desc', 'narr', 'title_desc']
 queries_vector = {}
 fout = {}
