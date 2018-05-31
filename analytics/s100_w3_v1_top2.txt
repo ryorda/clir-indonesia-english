@@ -1,0 +1,138 @@
+(py3-clir) ryorda.triaptahadi@Batam:~/repo/clir-indonesia-english$ python sorting_result.py 50 2 doc_query
+processing res_paralel_test_s100_w3_v1_desc.txt...
+processing res_paralel_test_s100_w3_v1_title_desc.txt...
+processing res_paralel_test_s100_w3_v1_title_desc.txt [done]
+processing res_paralel_test_s100_w3_v1_desc.txt [done]
+processing res_paralel_test_s100_w3_v1_title.txt...
+processing res_paralel_test_s100_w3_v1_narr.txt...
+processing res_paralel_test_s100_w3_v1_title.txt [done]
+processing res_paralel_test_s100_w3_v1_narr.txt [done]
+(py3-clir) ryorda.triaptahadi@Batam:~/repo/clir-indonesia-english$ cd trec_eval.9.0/
+(py3-clir) ryorda.triaptahadi@Batam:~/repo/clir-indonesia-english/trec_eval.9.0$
+ ./trec_eval qrels.txt ../proc_result/doc_query/proc_res_paralel_test_s100_w3_v1_title.txt 
+te_num_trec_measures 51 runid                 	all	NH-BM25
+num_q                 	all	50
+num_ret               	all	2500
+num_rel               	all	1258
+num_rel_ret           	all	0
+map                   	all	0.0000
+gm_map                	all	0.0000
+Rprec                 	all	0.0000
+bpref                 	all	0.0000
+recip_rank            	all	0.0000
+iprec_at_recall_0.00  	all	0.0000
+iprec_at_recall_0.10  	all	0.0000
+iprec_at_recall_0.20  	all	0.0000
+iprec_at_recall_0.30  	all	0.0000
+iprec_at_recall_0.40  	all	0.0000
+iprec_at_recall_0.50  	all	0.0000
+iprec_at_recall_0.60  	all	0.0000
+iprec_at_recall_0.70  	all	0.0000
+iprec_at_recall_0.80  	all	0.0000
+iprec_at_recall_0.90  	all	0.0000
+iprec_at_recall_1.00  	all	0.0000
+P_5                   	all	0.0000
+P_10                  	all	0.0000
+P_15                  	all	0.0000
+P_20                  	all	0.0000
+P_30                  	all	0.0000
+P_100                 	all	0.0000
+P_200                 	all	0.0000
+P_500                 	all	0.0000
+P_1000                	all	0.0000
+(py3-clir) ryorda.triaptahadi@Batam:~/repo/clir-indonesia-english/trec_eval.9.0$
+ ./trec_eval qrels.txt ../proc_result/doc_query/proc_res_paralel_test_s100_w3_v1_desc.txt 
+te_num_trec_measures 51 runid                 	all	NH-BM25
+num_q                 	all	50
+num_ret               	all	2500
+num_rel               	all	1258
+num_rel_ret           	all	2
+map                   	all	0.0001
+gm_map                	all	0.0000
+Rprec                 	all	0.0009
+bpref                 	all	0.0019
+recip_rank            	all	0.0027
+iprec_at_recall_0.00  	all	0.0027
+iprec_at_recall_0.10  	all	0.0000
+iprec_at_recall_0.20  	all	0.0000
+iprec_at_recall_0.30  	all	0.0000
+iprec_at_recall_0.40  	all	0.0000
+iprec_at_recall_0.50  	all	0.0000
+iprec_at_recall_0.60  	all	0.0000
+iprec_at_recall_0.70  	all	0.0000
+iprec_at_recall_0.80  	all	0.0000
+iprec_at_recall_0.90  	all	0.0000
+iprec_at_recall_1.00  	all	0.0000
+P_5                   	all	0.0000
+P_10                  	all	0.0000
+P_15                  	all	0.0013
+P_20                  	all	0.0010
+P_30                  	all	0.0013
+P_100                 	all	0.0004
+P_200                 	all	0.0002
+P_500                 	all	0.0001
+P_1000                	all	0.0000
+(py3-clir) ryorda.triaptahadi@Batam:~/repo/clir-indonesia-english/trec_eval.9.0$
+ ./trec_eval qrels.txt ../proc_result/doc_query/proc_res_paralel_test_s100_w3_v1_title_desc.txt 
+te_num_trec_measures 51 runid                 	all	NH-BM25
+num_q                 	all	50
+num_ret               	all	2500
+num_rel               	all	1258
+num_rel_ret           	all	2
+map                   	all	0.0001
+gm_map                	all	0.0000
+Rprec                 	all	0.0009
+bpref                 	all	0.0019
+recip_rank            	all	0.0033
+iprec_at_recall_0.00  	all	0.0033
+iprec_at_recall_0.10  	all	0.0000
+iprec_at_recall_0.20  	all	0.0000
+iprec_at_recall_0.30  	all	0.0000
+iprec_at_recall_0.40  	all	0.0000
+iprec_at_recall_0.50  	all	0.0000
+iprec_at_recall_0.60  	all	0.0000
+iprec_at_recall_0.70  	all	0.0000
+iprec_at_recall_0.80  	all	0.0000
+iprec_at_recall_0.90  	all	0.0000
+iprec_at_recall_1.00  	all	0.0000
+P_5                   	all	0.0000
+P_10                  	all	0.0020
+P_15                  	all	0.0013
+P_20                  	all	0.0010
+P_30                  	all	0.0007
+P_100                 	all	0.0004
+P_200                 	all	0.0002
+P_500                 	all	0.0001
+P_1000                	all	0.0000
+(py3-clir) ryorda.triaptahadi@Batam:~/repo/clir-indonesia-english/trec_eval.9.0$
+ ./trec_eval qrels.txt ../proc_result/doc_query/proc_res_paralel_test_s100_w3_v1_narr.txt 
+te_num_trec_measures 51 runid                 	all	NH-BM25
+num_q                 	all	50
+num_ret               	all	2500
+num_rel               	all	1258
+num_rel_ret           	all	0
+map                   	all	0.0000
+gm_map                	all	0.0000
+Rprec                 	all	0.0000
+bpref                 	all	0.0000
+recip_rank            	all	0.0000
+iprec_at_recall_0.00  	all	0.0000
+iprec_at_recall_0.10  	all	0.0000
+iprec_at_recall_0.20  	all	0.0000
+iprec_at_recall_0.30  	all	0.0000
+iprec_at_recall_0.40  	all	0.0000
+iprec_at_recall_0.50  	all	0.0000
+iprec_at_recall_0.60  	all	0.0000
+iprec_at_recall_0.70  	all	0.0000
+iprec_at_recall_0.80  	all	0.0000
+iprec_at_recall_0.90  	all	0.0000
+iprec_at_recall_1.00  	all	0.0000
+P_5                   	all	0.0000
+P_10                  	all	0.0000
+P_15                  	all	0.0000
+P_20                  	all	0.0000
+P_30                  	all	0.0000
+P_100                 	all	0.0000
+P_200                 	all	0.0000
+P_500                 	all	0.0000
+P_1000                	all	0.0000

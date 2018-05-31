@@ -1,0 +1,520 @@
+(py3-clir) ryorda.triaptahadi@Batam:~/repo/clir-indonesia-english$ python test/doc_query/test_paralel.py 100 3 2 2 100 > logs/result_paralel.txt 
+(py3-clir) ryorda.triaptahadi@Batam:~/repo/clir-indonesia-english$ python sorting_result.py 50 2 doc_query
+processing res_paralel_test_s100_w3_v2_desc.txt...
+processing res_paralel_test_s100_w3_v2_desc.txt [done]
+processing res_paralel_test_s100_w3_v1_desc.txt...
+processing res_paralel_test_s100_w3_v1_desc.txt [done]
+processing res_paralel_test_s100_w3_v2_title.txt...
+processing res_paralel_test_s100_w3_v2_title_desc.txt...
+processing res_paralel_test_s100_w3_v2_title_desc.txt [done]
+processing res_paralel_test_s100_w3_v2_title.txt [done]
+processing res_paralel_test_s100_w3_v2_narr.txt...
+processing res_paralel_test_s100_w3_v1_title_desc.txt...
+processing res_paralel_test_s100_w3_v2_narr.txt [done]
+processing res_paralel_test_s100_w3_v1_title_desc.txt [done]
+processing res_paralel_test_s100_w3_v1_title.txt...
+processing res_paralel_test_s100_w3_v1_narr.txt...
+processing res_paralel_test_s100_w3_v1_narr.txt [done]
+processing res_paralel_test_s100_w3_v1_title.txt [done]
+(py3-clir) ryorda.triaptahadi@Batam:~/repo/clir-indonesia-english$ cd trec_eval.9.0/
+(py3-clir) ryorda.triaptahadi@Batam:~/repo/clir-indonesia-english/trec_eval.9.0$
+ ./trec_eval qrels.txt ../proc_result/doc_query/proc_res_paralel_test_s100_w3_v2_title.txt 
+te_num_trec_measures 51 runid                 	all	NH-BM25
+num_q                 	all	50
+num_ret               	all	2500
+num_rel               	all	1258
+num_rel_ret           	all	1
+map                   	all	0.0000
+gm_map                	all	0.0000
+Rprec                 	all	0.0000
+bpref                 	all	0.0009
+recip_rank            	all	0.0004
+iprec_at_recall_0.00  	all	0.0004
+iprec_at_recall_0.10  	all	0.0000
+iprec_at_recall_0.20  	all	0.0000
+iprec_at_recall_0.30  	all	0.0000
+iprec_at_recall_0.40  	all	0.0000
+iprec_at_recall_0.50  	all	0.0000
+iprec_at_recall_0.60  	all	0.0000
+iprec_at_recall_0.70  	all	0.0000
+iprec_at_recall_0.80  	all	0.0000
+iprec_at_recall_0.90  	all	0.0000
+iprec_at_recall_1.00  	all	0.0000
+P_5                   	all	0.0000
+P_10                  	all	0.0000
+P_15                  	all	0.0000
+P_20                  	all	0.0000
+P_30                  	all	0.0000
+P_100                 	all	0.0002
+P_200                 	all	0.0001
+P_500                 	all	0.0000
+P_1000                	all	0.0000
+(py3-clir) ryorda.triaptahadi@Batam:~/repo/clir-indonesia-english/trec_eval.9.0$
+ ./trec_eval qrels.txt ../proc_result/doc_query/proc_res_paralel_test_s100_w3_v2_desc.txt 
+te_num_trec_measures 51 runid                 	all	NH-BM25
+num_q                 	all	50
+num_ret               	all	2500
+num_rel               	all	1258
+num_rel_ret           	all	0
+map                   	all	0.0000
+gm_map                	all	0.0000
+Rprec                 	all	0.0000
+bpref                 	all	0.0000
+recip_rank            	all	0.0000
+iprec_at_recall_0.00  	all	0.0000
+iprec_at_recall_0.10  	all	0.0000
+iprec_at_recall_0.20  	all	0.0000
+iprec_at_recall_0.30  	all	0.0000
+iprec_at_recall_0.40  	all	0.0000
+iprec_at_recall_0.50  	all	0.0000
+iprec_at_recall_0.60  	all	0.0000
+iprec_at_recall_0.70  	all	0.0000
+iprec_at_recall_0.80  	all	0.0000
+iprec_at_recall_0.90  	all	0.0000
+iprec_at_recall_1.00  	all	0.0000
+P_5                   	all	0.0000
+P_10                  	all	0.0000
+P_15                  	all	0.0000
+P_20                  	all	0.0000
+P_30                  	all	0.0000
+P_100                 	all	0.0000
+P_200                 	all	0.0000
+P_500                 	all	0.0000
+P_1000                	all	0.0000
+(py3-clir) ryorda.triaptahadi@Batam:~/repo/clir-indonesia-english/trec_eval.9.0$
+ ./trec_eval qrels.txt ../proc_result/doc_query/proc_res_paralel_test_s100_w3_v2_title_desc.txt 
+te_num_trec_measures 51 runid                 	all	NH-BM25
+num_q                 	all	50
+num_ret               	all	2500
+num_rel               	all	1258
+num_rel_ret           	all	0
+map                   	all	0.0000
+gm_map                	all	0.0000
+Rprec                 	all	0.0000
+bpref                 	all	0.0000
+recip_rank            	all	0.0000
+iprec_at_recall_0.00  	all	0.0000
+iprec_at_recall_0.10  	all	0.0000
+iprec_at_recall_0.20  	all	0.0000
+iprec_at_recall_0.30  	all	0.0000
+iprec_at_recall_0.40  	all	0.0000
+iprec_at_recall_0.50  	all	0.0000
+iprec_at_recall_0.60  	all	0.0000
+iprec_at_recall_0.70  	all	0.0000
+iprec_at_recall_0.80  	all	0.0000
+iprec_at_recall_0.90  	all	0.0000
+iprec_at_recall_1.00  	all	0.0000
+P_5                   	all	0.0000
+P_10                  	all	0.0000
+P_15                  	all	0.0000
+P_20                  	all	0.0000
+P_30                  	all	0.0000
+P_100                 	all	0.0000
+P_200                 	all	0.0000
+P_500                 	all	0.0000
+P_1000                	all	0.0000
+(py3-clir) ryorda.triaptahadi@Batam:~/repo/clir-indonesia-english/trec_eval.9.0$
+ 
+
+(py3-clir) ryorda.triaptahadi@Batam:~/repo/clir-indonesia-english$ head -n 400 logs/result_paralel.txt 
+most similar documents to title of query 0 :
+	 - 2009_02_14_madagascar-rumors-terrorize-antananarivo_.xml.gz.raw
+	 - 2009_04_12_thailand_e2_80_99s-_e2_80_9ccolored_e2_80_9d-protesters_.xml.gz.raw
+most similar documents to title of query 1 :
+	 - 2009_07_24_bangladesh-photos-of-solar-eclipse_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 2 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to title of query 3 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 4 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 5 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+most similar documents to title of query 6 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+most similar documents to title of query 7 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 8 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+most similar documents to title of query 9 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 10 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 11 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_09_22_bhutan-climate-change-and-religion_.xml.gz.raw
+most similar documents to title of query 12 :
+	 - 2009_06_24_pakistan-taliban-internal-conflict_.xml.gz.raw
+	 - 2009_11_07_cuba-details-of-the-sanchez-detention-emerge_.xml.gz.raw
+most similar documents to title of query 13 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to title of query 14 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+most similar documents to title of query 15 :
+	 - 2011_09_02_iran-smile-the-regime-is-reading-your-emails_.xml.gz.raw
+	 - 2011_01_28_egypt-information-getting-out-despite-information-blackout_.xml.gz.raw
+most similar documents to title of query 16 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 17 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 18 :
+	 - 2009_11_07_cuba-details-of-the-sanchez-detention-emerge_.xml.gz.raw
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+most similar documents to title of query 19 :
+	 - 2009_04_14_morocco-a-new-green-party_.xml.gz.raw
+	 - 2009_03_03_thailand-thai-style-democracy_.xml.gz.raw
+most similar documents to title of query 20 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to title of query 21 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 22 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_11_07_cuba-details-of-the-sanchez-detention-emerge_.xml.gz.raw
+most similar documents to title of query 23 :
+	 - 2012_09_11_china-journalists-leaving-the-field_.xml.gz.raw
+	 - 2009_06_24_pakistan-taliban-internal-conflict_.xml.gz.raw
+most similar documents to title of query 24 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2012_06_02_hong-kong-complaint-culture_.xml.gz.raw
+most similar documents to title of query 25 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 26 :
+	 - 2009_07_24_bangladesh-photos-of-solar-eclipse_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to title of query 27 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to title of query 28 :
+	 - 2009_02_20_pakistan-caste-system-still-alive_.xml.gz.raw
+	 - 2009_06_24_st-vincent-the-grenadines-breaking-the-silence_.xml.gz.raw
+most similar documents to title of query 29 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 30 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to title of query 31 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 32 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 33 :
+	 - 2009_05_03_china-he-saw-no-conscience-no-sympathy_.xml.gz.raw
+	 - 2009_11_07_cuba-details-of-the-sanchez-detention-emerge_.xml.gz.raw
+most similar documents to title of query 34 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 35 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+most similar documents to title of query 36 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 37 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 38 :
+	 - 2012_09_11_china-journalists-leaving-the-field_.xml.gz.raw
+	 - 2009_06_24_pakistan-taliban-internal-conflict_.xml.gz.raw
+most similar documents to title of query 39 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 40 :
+	 - 2010_03_10_midde-east-mourning-the-grand-imam-of-al-azhar-mosque_.xml.gz.raw
+	 - 2010_09_28_egypt-the-inevitable-mubarak-photshopping-contest_.xml.gz.raw
+most similar documents to title of query 41 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 42 :
+	 - 2012_06_14_development-model-for-myanmar_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to title of query 43 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+most similar documents to title of query 44 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_11_07_cuba-details-of-the-sanchez-detention-emerge_.xml.gz.raw
+most similar documents to title of query 45 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+most similar documents to title of query 46 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_11_07_cuba-details-of-the-sanchez-detention-emerge_.xml.gz.raw
+most similar documents to title of query 47 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_11_07_cuba-details-of-the-sanchez-detention-emerge_.xml.gz.raw
+most similar documents to title of query 48 :
+	 - 2009_03_30_china-earth-hour_.xml.gz.raw
+	 - 2012_09_11_china-journalists-leaving-the-field_.xml.gz.raw
+most similar documents to title of query 49 :
+	 - 2009_07_24_bangladesh-photos-of-solar-eclipse_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to desc of query 0 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to desc of query 1 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to desc of query 2 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_02_23_costa-rica-creativity-through-collectivity_.xml.gz.raw
+most similar documents to desc of query 3 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to desc of query 4 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_11_07_cuba-details-of-the-sanchez-detention-emerge_.xml.gz.raw
+most similar documents to desc of query 5 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to desc of query 6 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to desc of query 7 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to desc of query 8 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to desc of query 9 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to desc of query 10 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2012_06_24_will-a-unified-time-zone-work-for-indonesia_.xml.gz.raw
+most similar documents to desc of query 11 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to desc of query 12 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to desc of query 13 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to desc of query 14 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to desc of query 15 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_07_21_indonesia-online-nationalism_.xml.gz.raw
+most similar documents to desc of query 16 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_02_23_costa-rica-creativity-through-collectivity_.xml.gz.raw
+most similar documents to desc of query 17 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to desc of query 18 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to desc of query 19 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to desc of query 20 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to desc of query 21 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to desc of query 22 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to desc of query 23 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to desc of query 24 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+most similar documents to desc of query 25 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to desc of query 26 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to desc of query 27 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to desc of query 28 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to desc of query 29 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to desc of query 30 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to desc of query 31 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2011_08_20_east-timor-changing-family-ties_.xml.gz.raw
+most similar documents to desc of query 32 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to desc of query 33 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+most similar documents to desc of query 34 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to desc of query 35 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to desc of query 36 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+most similar documents to desc of query 37 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+most similar documents to desc of query 38 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to desc of query 39 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to desc of query 40 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to desc of query 41 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to desc of query 42 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to desc of query 43 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to desc of query 44 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to desc of query 45 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2012_06_24_will-a-unified-time-zone-work-for-indonesia_.xml.gz.raw
+most similar documents to desc of query 46 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to desc of query 47 :
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to desc of query 48 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to desc of query 49 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to narr of query 0 :
+	 - 2011_06_21_china-chinese-culture-and-kungfu-panda_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to narr of query 1 :
+	 - 2011_06_21_china-chinese-culture-and-kungfu-panda_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to narr of query 2 :
+	 - 2009_02_23_costa-rica-creativity-through-collectivity_.xml.gz.raw
+	 - 2011_06_21_china-chinese-culture-and-kungfu-panda_.xml.gz.raw
+most similar documents to narr of query 3 :
+	 - 2009_02_23_costa-rica-creativity-through-collectivity_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to narr of query 4 :
+	 - 2012_06_24_will-a-unified-time-zone-work-for-indonesia_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to narr of query 5 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to narr of query 6 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2011_06_21_china-chinese-culture-and-kungfu-panda_.xml.gz.raw
+most similar documents to narr of query 7 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_02_23_costa-rica-creativity-through-collectivity_.xml.gz.raw
+most similar documents to narr of query 8 :
+	 - 2011_06_21_china-chinese-culture-and-kungfu-panda_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to narr of query 9 :
+	 - 2012_06_24_will-a-unified-time-zone-work-for-indonesia_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to narr of query 10 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_02_23_costa-rica-creativity-through-collectivity_.xml.gz.raw
+most similar documents to narr of query 11 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to narr of query 12 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2012_06_24_will-a-unified-time-zone-work-for-indonesia_.xml.gz.raw
+most similar documents to narr of query 13 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2012_06_24_will-a-unified-time-zone-work-for-indonesia_.xml.gz.raw
+most similar documents to narr of query 14 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to narr of query 15 :
+	 - 2009_02_23_costa-rica-creativity-through-collectivity_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to narr of query 16 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to narr of query 17 :
+	 - 2009_02_23_costa-rica-creativity-through-collectivity_.xml.gz.raw
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+most similar documents to narr of query 18 :
+	 - 2009_02_23_costa-rica-creativity-through-collectivity_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to narr of query 19 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to narr of query 20 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to narr of query 21 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_02_23_costa-rica-creativity-through-collectivity_.xml.gz.raw
+most similar documents to narr of query 22 :
+	 - 2009_02_23_costa-rica-creativity-through-collectivity_.xml.gz.raw
+	 - 2011_06_21_china-chinese-culture-and-kungfu-panda_.xml.gz.raw
+most similar documents to narr of query 23 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to narr of query 24 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to narr of query 25 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to narr of query 26 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2012_06_24_will-a-unified-time-zone-work-for-indonesia_.xml.gz.raw
+most similar documents to narr of query 27 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to narr of query 28 :
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to narr of query 29 :
+	 - 2013_06_24_video-exposes-lavish-lifestyle-of-thai-monks_.xml.gz.raw
+	 - 2009_03_03_japan-and-taiwan-gay-politics_.xml.gz.raw
+most similar documents to narr of query 30 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2012_06_24_will-a-unified-time-zone-work-for-indonesia_.xml.gz.raw
+most similar documents to narr of query 31 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to narr of query 32 :
+	 - 2009_10_07_indonesia-east-timor-border-dispute-heats-up_.xml.gz.raw
+	 - 2011_08_22_china-teahouse-culture-in-chengdu_.xml.gz.raw
+most similar documents to narr of query 33 :
+
