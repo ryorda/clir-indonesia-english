@@ -96,7 +96,7 @@ for k in keys :
 		doc_query = []
 		for (d_par, _) in docs_paralel :
 			d_par_name = d_par.split(":")[1].strip()
-			f = open('dataset/doc_query/clean/en_id/{0}/{1}'.format(mode, d_par_name), 'r')
+			f = open('dataset/doc_query/clean/en_id/{0}/{1}'.format(mode, d_par_name), 'r', encoding='utf-8')
 			for line in f :
 				doc_query += line.strip().split()
 
