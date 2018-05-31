@@ -30,7 +30,7 @@ re_dot = re.compile(r'\.', re.M)
 re_clean = re.compile(r'[^A-Za-z0-9]', re.M)
 re_blank = re.compile(r'\n\n*\s*\n', re.M)
 
-translater = yandex.Translater()
+tr = yandex.Translater()
 tr.set_key('trnsl.1.1.20170514T113308Z.dc0360943fce4c7a.beca61b6d2d33fb4f71805c46661196557e6014e')
 tr.set_from_lang('en')
 tr.set_to_lang('id')
