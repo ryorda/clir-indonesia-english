@@ -60,12 +60,24 @@ if dataset == 'GlobalVoices' :
 # merge en and id
 for d in doc_pairs :
 	id_doc = d.split(":")[1]
+	id_doc = id_doc.strip().split('.')[0]
 	en_doc = d.split(":")[0]
+	en_doc = en_doc.strip().split('.')[0]
+
 	doc_name = en_doc
+
 	print('dataset/{0}/raw/en_id/{1}'.format(dataset, doc_name))
 	fout = open('dataset/{0}/extracted_raw/en_id/{1}.raw'.format(dataset, doc_name), 'w', encoding='utf-8')
-	with open('dataset/{0}/raw/id/{1}'.format(dataset, id_doc), 'rb') as f:
-		extract(f, fout)
-	with open('dataset/{0}/raw/en/{1}'.format(dataset, en_doc), 'rb') as f:
-		extract(f, fout)
+	
+	f = open('dataset/{0}/extracted_raw/id/{1}.raw'.format(dataset, id_doc), 'r', encoding='utf-8')
+	for line in f :
+		fout.write(line.strip())
+		fout.write("\n")
+	fout.write("\n")
+
+	f = open('dataset/{0}/extracted_raw/en/{1}.raw'.format(dataset, en_doc), 'r', encoding='utf-8')
+	for line in f :
+		fout.write(line.strip())
+		fout.write("\n")
+
 	fout.close()
