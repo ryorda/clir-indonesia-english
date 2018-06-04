@@ -32,26 +32,29 @@ re_blank = re.compile(r'\n\n*\s*\n', re.M)
 
 tr = yandex.Translater()
 tr.set_key('trnsl.1.1.20170514T113308Z.dc0360943fce4c7a.beca61b6d2d33fb4f71805c46661196557e6014e')
-tr.set_from_lang('en')
-tr.set_to_lang('id')
+tr.set_from_lang('id')
+tr.set_to_lang('en')
 
 
 idx = 0
 for record in cur :
 	content = re_blank.sub('\n', record[2].strip())
-	title = record[4].strip()
+	title = re_clean.sub('_', record[4].strip())
 
 	print('translating doc-{0} ...'.format(idx))
 	idx += 1
-	
+
 	fout_id = open('dataset/{0}/extracted_raw/id/{1}.raw'.format(source, title), 'w', encoding='utf-8')
 	fout_en = open('dataset/{0}/extracted_raw/en/{1}.raw'.format(source, title), 'w', encoding='utf-8')
 	
 	fout_id.write(content)
 	fout_id.write("\n")
+	fout_id.close()
 	
 	tr.set_text(content)
 	tr_content = tr.translate()
+	print(tr_content)
 	
 	fout_en.write(tr_content)
 	fout_en.write("\n")
+	fout_en.close()
