@@ -35,6 +35,7 @@ tr.set_key('trnsl.1.1.20170514T113308Z.dc0360943fce4c7a.beca61b6d2d33fb4f71805c4
 tr.set_from_lang('id')
 tr.set_to_lang('en')
 
+fout_pair = open('dataset/{0}/en-id.txt/{0}.en-id.ids'.format(source), 'w')
 
 idx = 0
 for record in cur :
@@ -53,8 +54,13 @@ for record in cur :
 	
 	tr.set_text(content)
 	tr_content = tr.translate()
-	print(tr_content)
+	# print(tr_content)
 	
 	fout_en.write(tr_content)
 	fout_en.write("\n")
 	fout_en.close()
+
+	fout_pair.write('en/{0}\tid/{1}\t{2}\t{2}\n'.format(title, title, idx))
+	fout_pair.flush()
+
+fout_pair.close()
