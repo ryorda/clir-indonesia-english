@@ -26,7 +26,7 @@ mode = int(sys.argv[4])
 topn_paralel = int(sys.argv[5])
 topn_test = int(sys.argv[6])
 
-doc2vec_test = Doc2Vec.load('model/doc_query/model_en_test_s%d_w%d_c%d_v%d.doc2vec' % (size, window, mode, min_count))
+doc2vec_test = Doc2Vec.load('model/doc_query/model_en_test_s%d_w%d_c%d_v%d.doc2vec' % (size, window, min_count, mode))
 
 def get_english_queries() :
 		
