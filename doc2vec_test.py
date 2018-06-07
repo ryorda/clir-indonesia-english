@@ -12,10 +12,15 @@ from multiprocessing import Pool
 
 mode = int(sys.argv[1])
 
-def create_model(en_doc, size, window, mode) :
-	print('creating model_en_test_s' + str(size) + "_w" + str(window) + "_v" + str(mode)  + "...")
-	model_en = Doc2Vec(en_doc, size=size, window=window, dm=0, dbow_words=1, min_count=5, workers=4)
-	model_en.save('model/doc_query/model_en_test_s' + str(size) + "_w" + str(window) + "_v" + str(mode) + ".doc2vec")
+en_doc = []
+en_stemmer = PorterStemmer()
+en_stops = set(stopwords.words('english'))
+
+def create_model(size, window, mode, min_count) :
+	global en_doc
+	print('creating model_en_test_s' + str(size) + "_w" + str(window) + "_c" + str(min_count) + "_v" + str(mode)  + "...")
+	model_en = Doc2Vec(en_doc, size=size, window=window, dm=0, dbow_words=1, min_count=min_count, workers=4)
+	model_en.save('model/doc_query/model_en_test_s' + str(size) + "_w" + str(window) + "_c" + str(min_count) + "_v" + str(mode) + ".doc2vec")
 
 # add test case
 
@@ -24,9 +29,6 @@ regex_news = [None, re.compile('la[0-9]+')]
 regex_docno = re.compile('<DOCNO>.*?</DOCNO>', re.M)
 regex_docno2 = re.compile('</?DOCNO>')
 
-en_doc = []
-en_stemmer = PorterStemmer()
-en_stops = set(stopwords.words('english'))
 
 re_clean = re.compile(r'[^A-Za-z0-9]', re.M)
 
@@ -52,6 +54,7 @@ for i in range(len(news)) :
 						text = re_clean.sub(' ', text)
 						words += text.split()
 					elif mode == 3 :
+						text = re_clean.sub(' ', text)
 						tokens = text.split()
 						text = []
 						for t in tokens :
@@ -59,11 +62,21 @@ for i in range(len(news)) :
 								text.append(t)
 						words += text
 					elif mode == 4 :
+						text = re_clean.sub(' ', text)
 						tokens = text.split()
 						text = []
 						for t in tokens :
 							text.append(en_stemmer.stem(t))
 						words += text
+					elif mode == 5 :
+						text = re_clean.sub(' ', text)
+						tokens = text.split()
+						text = []
+						for t in tokens :
+							if t not in en_stops :
+								text.append(en_stemmer.stem(t))
+						words += text
+						
 					else :
 						print("[ERROR] invalid mode number")
 						exit()
@@ -71,12 +84,13 @@ for i in range(len(news)) :
 
 print("docs : %d" % len(en_doc))
 
-# pool = Pool(int(sys.argv[2]))
+pool = Pool(int(sys.argv[2]))
 
-# args = []
+args = []
 for size in [100, 200, 300, 400] :
 	for window in [1, 3, 5, 7] :
-		# args.append((en_doc, size, window, mode))
-		create_model(en_doc, size, window, mode)
+		for min_count in [1, 5, 10, 20, 50] :
+			args.append((size, window, mode, min_count))
+			# create_model(en_doc, size, window, mode, min_count)
 
-# pool.starmap(create_model, args)
+pool.starmap(create_model, args)

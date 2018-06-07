@@ -11,15 +11,18 @@ import string
 from multiprocessing import Pool
 
 mode = int(sys.argv[1])
+documents = []
 
-def create_model(en_doc, size, window, mode) :
-	print('creating model_en_test_s' + str(size) + "_w" + str(window) + "_v" + str(mode)  + "...")
-	model_en = Doc2Vec(en_doc, size=size, window=window, dm=0, dbow_words=1, min_count=5, workers=4)
-	model_en.save('model/doc_query/model_paralel_s' + str(size) + "_w" + str(window) + "_v" + str(mode) + ".doc2vec")
+def create_model(size, window, mode, min_count) :
+	global documents
+	en_doc = documents
+	print(len(en_doc))
+	print('creating model_paralel_s' + str(size) + "_w" + str(window) + "_c" + str(min_count) + "_v" + str(mode)  + "...")
+	model_en = Doc2Vec(en_doc, size=size, window=window, dm=0, dbow_words=1, min_count=0, workers=4, iter= 20)
+	model_en.save('model/doc_query/model_paralel_s' + str(size) + "_w" + str(window) + "_c" + str(min_count) + "_v" + str(mode) + ".doc2vec")
 
 
 doc_id = 0
-documents = []
 for d in os.listdir('dataset/doc_query/clean/en_id/{0}/'.format(mode)) :
 	doc_id += 1
 	words = []
@@ -31,12 +34,13 @@ for d in os.listdir('dataset/doc_query/clean/en_id/{0}/'.format(mode)) :
 
 print("docs : %d" % len(documents))
 
-# pool = Pool(int(sys.argv[2]))
+pool = Pool(int(sys.argv[2]))
 
-# args = []
+args = []
 for size in [100, 200, 300, 400] :
 	for window in [1, 3, 5, 7] :
-		# args.append((en_doc, size, window, mode))
-		create_model(documents, size, window, mode)
+		for min_count in [1, 5, 10, 20, 50] :
+			args.append((size, window, mode, min_count))
+			# create_model(en_doc, size, window, mode, min_count)
 
-# pool.starmap(create_model, args)
+pool.starmap(create_model, args)
