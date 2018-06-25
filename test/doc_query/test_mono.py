@@ -23,8 +23,7 @@ size = int(sys.argv[1])
 window = int(sys.argv[2])
 min_count = int(sys.argv[3])
 mode = int(sys.argv[4])
-topn_paralel = int(sys.argv[5])
-topn_test = int(sys.argv[6])
+topn_test = int(sys.argv[5])
 
 doc2vec_test = Doc2Vec.load('model/doc_query/model_en_test_s%d_w%d_c%d_v%d.doc2vec' % (size, window, min_count, mode))
 
