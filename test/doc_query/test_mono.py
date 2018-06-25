@@ -68,6 +68,15 @@ def get_english_queries() :
 					for t in qs[i].split() :
 						text.append(en_stemmer.stem(t))
 					qs[i] = text				
+					
+			elif mode == 5 :
+				for i in range(len(qs)) :
+					text = []
+					for t in qs[i].split() :
+						if t not in en_stops :
+							text.append(en_stemmer.stem(t))
+					qs[i] = text				
+
 			else :
 				print ('[ERROR] invalid mode')
 				exit()
