@@ -16,7 +16,8 @@ en_doc = []
 en_stemmer = PorterStemmer()
 en_stops = set(stopwords.words('english'))
 
-def create_model(size, window, mode, min_count) :
+# def create_model(size, window, mode, min_count) :
+def create_model(en_doc, size, window, mode, min_count) :
 	global en_doc
 	print('creating model_en_test_s' + str(size) + "_w" + str(window) + "_c" + str(min_count) + "_v" + str(mode)  + "...")
 	model_en = Doc2Vec(en_doc, size=size, window=window, dm=0, dbow_words=1, min_count=min_count, workers=4)
@@ -84,13 +85,13 @@ for i in range(len(news)) :
 
 print("docs : %d" % len(en_doc))
 
-pool = Pool(int(sys.argv[2]))
+# pool = Pool(int(sys.argv[2]))
 
 args = []
 for size in [100, 200, 300, 400] :
 	for window in [1, 3, 5, 7] :
 		for min_count in [1, 5, 10, 20, 50] :
-			args.append((size, window, mode, min_count))
-			# create_model(en_doc, size, window, mode, min_count)
+			# args.append((size, window, mode, min_count))
+			create_model(en_doc, size, window, mode, min_count)
 
-pool.starmap(create_model, args)
+# pool.starmap(create_model, args)

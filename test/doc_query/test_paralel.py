@@ -29,7 +29,7 @@ topn_test = int(sys.argv[6])
 doc2vec_paralel = Doc2Vec.load('model/doc_query/model_paralel_s%d_w%d_c%d_v%d.doc2vec' % (size, window, min_count, mode))
 doc2vec_test = Doc2Vec.load('model/doc_query/model_en_test_s%d_w%d_c%d_v%d.doc2vec' % (size, window, min_count, mode))
 
-def get_indonesia_queries() :
+def get_indonesia_queries():
 		
 		queries_id = Queries.Queries('IN')
 		queries = { 
