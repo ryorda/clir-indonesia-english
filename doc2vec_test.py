@@ -18,7 +18,6 @@ en_stops = set(stopwords.words('english'))
 
 # def create_model(size, window, mode, min_count) :
 def create_model(en_doc, size, window, mode, min_count) :
-	global en_doc
 	print('creating model_en_test_s' + str(size) + "_w" + str(window) + "_c" + str(min_count) + "_v" + str(mode)  + "...")
 	model_en = Doc2Vec(en_doc, size=size, window=window, dm=0, dbow_words=1, min_count=min_count, workers=4)
 	model_en.save('model/doc_query/model_en_test_s' + str(size) + "_w" + str(window) + "_c" + str(min_count) + "_v" + str(mode) + ".doc2vec")
