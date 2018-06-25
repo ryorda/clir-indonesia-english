@@ -9,7 +9,6 @@ import sys
 from nltk.tokenize import TweetTokenizer
 import time
 import numpy as np
-import tensorflow as tf
 from nltk.corpus import stopwords
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
