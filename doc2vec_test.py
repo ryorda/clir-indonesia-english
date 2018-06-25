@@ -10,6 +10,8 @@ from nltk.corpus import stopwords
 import string
 from multiprocessing import Pool
 
+mode = None
+
 en_doc = []
 en_stemmer = PorterStemmer()
 en_stops = set(stopwords.words('english'))
@@ -88,7 +90,8 @@ args = []
 for size in [100, 200, 300, 400] :
 	for window in [1, 3, 5, 7] :
 		for min_count in [1, 5, 10, 20, 50] :
-			for mode in [1, 2, 3, 4, 5] :
+			for m in [1, 2, 3, 4, 5] :
+				mode = m
 				# args.append((size, window, mode, min_count))
 				create_model(en_doc, size, window, mode, min_count)
 
