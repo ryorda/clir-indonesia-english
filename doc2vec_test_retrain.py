@@ -21,19 +21,17 @@ size = int(sys.argv[1])
 window = int(sys.argv[2])
 min_count = int(sys.argv[3])
 mode = int(sys.argv[4])
-max_epoch = int(sys.argv[5])
-save_per_epoch = int(sys.argv[6])
+num_epoch = int(sys.argv[5])
+iter_per_epoch = int(sys.argv[6])
 
 # def create_model(size, window, mode, min_count) :
 def train_model(en_doc, size, window, mode, min_count) :
 	print('retrain model_en_test_s' + str(size) + "_w" + str(window) + "_c" + str(min_count) + "_v" + str(mode)  + "...", flush=True)
 	model_en = Doc2Vec.load('model/doc_query/model_en_test_s%d_w%d_c%d_v%d.doc2vec' % (size, window, min_count, mode))
-	for i in range(1, max_epoch+1) :
+	for i in range(1, num_epoch+1) :
 		shuffle(en_doc)
-		model_en.train(en_doc, epochs=1, total_words = raw_words)
-		if i % save_per_epoch == 0 :
-			model_en.save('model/doc_query/model_en_test_s' + str(size) + "_w" + str(window) + "_c" + str(min_count) + "_v" + str(mode) +  "_i" + str(i) + ".doc2vec")
-	model_en.save('model/doc_query/model_en_test_s' + str(size) + "_w" + str(window) + "_c" + str(min_count) + "_v" + str(mode) +  "_i" + str(max_epoch) + ".doc2vec")
+		model_en.train(en_doc, epochs=iter_per_epoch, total_words = raw_words)
+		model_en.save('model/doc_query/model_en_test_s' + str(size) + "_w" + str(window) + "_c" + str(min_count) + "_v" + str(mode) +  "_i" + str(i*iter_per_epoch) + ".doc2vec")
 
 # add test case
 
