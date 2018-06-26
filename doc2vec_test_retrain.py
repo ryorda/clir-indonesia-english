@@ -15,9 +15,12 @@ en_doc = {}
 en_stemmer = PorterStemmer()
 en_stops = set(stopwords.words('english'))
 
-mode = int(sys.argv[1])
-max_epoch = int(sys.argv[2])
-save_per_epoch = int(sys.argv[3])
+size = int(sys.argv[1])
+window = int(sys.argv[2])
+min_count = int(sys.argv[3])
+mode = int(sys.argv[4])
+max_epoch = int(sys.argv[5])
+save_per_epoch = int(sys.argv[6])
 
 # def create_model(size, window, mode, min_count) :
 def train_model(en_doc, size, window, mode, min_count) :
@@ -103,11 +106,11 @@ print("docs : %d" % len(en_doc) , flush=True)
 # pool = Pool(int(sys.argv[2]))
 
 args = []
-for size in [100, 200, 300, 400] :
-	for window in [1, 3, 5, 7] :
-		for min_count in [1, 5, 10, 20, 50] :
-			m = mode
+# for size in [100, 200, 300, 400] :
+# 	for window in [1, 3, 5, 7] :
+# 		for min_count in [1, 5, 10, 20, 50] :
+# 			m = mode
 			# args.append((size, window, mode, min_count))
-			create_model(en_doc[m], size, window, m, min_count)
+create_model(en_doc[mode], size, window, m, min_count)
 
 # pool.starmap(create_model, args)
