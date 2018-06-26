@@ -55,8 +55,7 @@ for i in range(len(news)) :
 				elif '<DOCNO>' in line :
 					docno = regex_docno2.sub('', line.strip()).strip()
 				elif '</DOC>' in line :
-					for mode in [1, 2, 3, 4, 5] :
-						en_doc.append(LabeledSentence(words=words, tags=['news_' + docno]))
+					en_doc.append(LabeledSentence(words=words, tags=['news_' + docno]))
 				else :
 					text = line.strip().lower()
 					if mode == 1 :
