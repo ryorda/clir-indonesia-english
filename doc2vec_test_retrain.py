@@ -12,6 +12,7 @@ from multiprocessing import Pool
 from random import shuffle
 
 
+raw_words = 0
 en_doc = []
 en_stemmer = PorterStemmer()
 en_stops = set(stopwords.words('english'))
@@ -29,7 +30,7 @@ def train_model(en_doc, size, window, mode, min_count) :
 	model_en = Doc2Vec.load('model/doc_query/model_en_test_s%d_w%d_c%d_v%d.doc2vec' % (size, window, min_count, mode))
 	for i in range(1, max_epoch+1) :
 		shuffle(en_doc)
-		model_en.train(en_doc)
+		model_en.train(en_doc, epochs=1, total_words = raw_words)
 		if i % save_per_epoch == 0 :
 			model_en.save('model/doc_query/model_en_test_s' + str(size) + "_w" + str(window) + "_c" + str(min_count) + "_v" + str(mode) +  "_i" + str(i) + ".doc2vec")
 	model_en.save('model/doc_query/model_en_test_s' + str(size) + "_w" + str(window) + "_c" + str(min_count) + "_v" + str(mode) +  "_i" + str(max_epoch) + ".doc2vec")
@@ -58,6 +59,7 @@ for i in range(len(news)) :
 					docno = regex_docno2.sub('', line.strip()).strip()
 				elif '</DOC>' in line :
 					en_doc.append(LabeledSentence(words=words, tags=['news_' + docno]))
+					raw_words += len(words)
 				else :
 					text = line.strip().lower()
 					if mode == 1 :
@@ -95,6 +97,7 @@ for i in range(len(news)) :
 
 
 print("docs : %d" % len(en_doc) , flush=True)	
+print("words : %d" % raw_words , flush=True)	
 
 # pool = Pool(int(sys.argv[2]))
 
