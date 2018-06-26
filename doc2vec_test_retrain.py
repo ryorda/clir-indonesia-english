@@ -101,6 +101,6 @@ print("docs : %d" % len(en_doc) , flush=True)
 # 		for min_count in [1, 5, 10, 20, 50] :
 # 			m = mode
 			# args.append((size, window, mode, min_count))
-create_model(en_doc[mode], size, window, m, min_count)
+train_model(en_doc, size, window, mode, min_count)
 
 # pool.starmap(create_model, args)
