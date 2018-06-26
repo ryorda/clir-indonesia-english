@@ -96,7 +96,7 @@ queries_vector = {}
 fout = {}
 for k in keys :
 	queries_vector[k] = []
-	fout[k] = open('result/doc_query/res_mono_test_s%d_w%d_c%d_v%d_%s.txt' % (size, window, min_count, mode, k), 'w', encoding='utf-8')
+	fout[k] = open('result/doc_query/res_mono_test_s%d_w%d_c%d_v%d_i%d_%s.txt' % (size, window, min_count, mode, epoch, k), 'w', encoding='utf-8')
 	idx = 0
 
 	for q in queries[k] :
