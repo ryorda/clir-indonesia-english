@@ -11,7 +11,7 @@ import string
 from multiprocessing import Pool
 
 
-en_doc = {}
+en_doc = []
 en_stemmer = PorterStemmer()
 en_stops = set(stopwords.words('english'))
 
@@ -41,71 +41,62 @@ regex_docno2 = re.compile('</?DOCNO>')
 
 re_clean = re.compile(r'[^A-Za-z0-9]', re.M)
 
-for mode in [1, 2, 3, 4, 5] :
-	en_doc[mode] = []
-
 for i in range(len(news)) :
 	for d in os.listdir('news/%s/' % news[i]) :
 		if (regex_news[i] is None or regex_news[i].match(d)) :
 			f = open(os.path.abspath(('news/%s/' % news[i]) + d), 'r', encoding="latin-1", errors='ignore')
 			
-			words = {}
-			for mode in [1, 2, 3, 4, 5] :
-				words[mode] = []
+			words = []
 
 			docno = ''
 			for line in f :
 				if '<DOC>' in line :
-					words = {}
-					for mode in [1, 2, 3, 4, 5] :
-						words[mode] = []
+					words = []
 				elif '<DOCNO>' in line :
 					docno = regex_docno2.sub('', line.strip()).strip()
 				elif '</DOC>' in line :
 					for mode in [1, 2, 3, 4, 5] :
-						en_doc[mode].append(LabeledSentence(words=words[mode], tags=['news_' + docno]))
+						en_doc.append(LabeledSentence(words=words, tags=['news_' + docno]))
 				else :
-					for mode in [1, 2, 3, 4, 5] :
-						text = line.strip().lower()
-						if mode == 1 :
-							words[mode] += text.split()
-						elif mode == 2 :
-							text = re_clean.sub(' ', text)
-							words[mode] += text.split()
-						elif mode == 3 :
-							text = re_clean.sub(' ', text)
-							tokens = text.split()
-							text = []
-							for t in tokens :
-								if t not in en_stops :
-									text.append(t)
-							words[mode] += text
-						elif mode == 4 :
-							text = re_clean.sub(' ', text)
-							tokens = text.split()
-							text = []
-							for t in tokens :
+					text = line.strip().lower()
+					if mode == 1 :
+						words += text.split()
+					elif mode == 2 :
+						text = re_clean.sub(' ', text)
+						words += text.split()
+					elif mode == 3 :
+						text = re_clean.sub(' ', text)
+						tokens = text.split()
+						text = []
+						for t in tokens :
+							if t not in en_stops :
+								text.append(t)
+						words += text
+					elif mode == 4 :
+						text = re_clean.sub(' ', text)
+						tokens = text.split()
+						text = []
+						for t in tokens :
+							text.append(en_stemmer.stem(t))
+						words += text
+					elif mode == 5 :
+						text = re_clean.sub(' ', text)
+						tokens = text.split()
+						text = []
+						for t in tokens :
+							if t not in en_stops :
 								text.append(en_stemmer.stem(t))
-							words[mode] += text
-						elif mode == 5 :
-							text = re_clean.sub(' ', text)
-							tokens = text.split()
-							text = []
-							for t in tokens :
-								if t not in en_stops :
-									text.append(en_stemmer.stem(t))
-							words[mode] += text
+						words += text
 							
-						else :
-							print("[ERROR] invalid mode number", flush=True)
-							exit()
+					else :
+						print("[ERROR] invalid mode number", flush=True)
+						exit()
 
 
 print("docs : %d" % len(en_doc) , flush=True)	
 
 # pool = Pool(int(sys.argv[2]))
 
-args = []
 # for size in [100, 200, 300, 400] :
 # 	for window in [1, 3, 5, 7] :
 # 		for min_count in [1, 5, 10, 20, 50] :
