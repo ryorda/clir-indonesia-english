@@ -14803,3 +14803,4 @@ yahudi	 Jewish,Jewish,jewish,Jew
 aljir	algiers
 adulyadej	adulyadej
 pemuda-pemudi	youth
+kulkas  refrigerator
